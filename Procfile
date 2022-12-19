@@ -1,1 +1,1 @@
-web: gunicorn active_gym.wsgi
+web: gunicorn VOH.wsgi
