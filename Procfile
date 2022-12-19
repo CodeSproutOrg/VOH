@@ -1,0 +1,1 @@
+web: gunicorn active_gym.wsgi

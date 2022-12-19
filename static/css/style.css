@@ -1,0 +1,146 @@
+body {font-family: "Anton", sans-serif;}
+.title {
+    font-family: "Archivo+Black";
+    font-weight: bolder;
+}
+.content {padding: 2% 0;}
+.main-div {height: 100vh;}
+.img {width: 100%; border-radius: 50% 50% 0 0;}
+.green {color: #24463A;}
+
+
+#main-page {
+    background-image: url(../img/main-page/home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#main-page-text {
+    width: 50%;
+    margin-top: 15%;
+    text-align: center;
+    font-family: "Quicksand";
+    font-size: 25px;
+}
+
+#who-we-are {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+ }
+#who-we-are-content {width: 40%;}
+#who-we-are-img {
+    width: 50%;
+    display: flex;
+}
+
+#main-fight {
+    background-color: #24463A;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#main-fight-title {
+    margin: 4% 2%;
+    width: 95%;
+}
+#fights {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.fight {
+    text-align: center;
+    padding: 2%;
+}
+.fight-text {
+    text-align: center;
+    padding: 5%;
+}
+
+#numbers {
+    padding: 5%;
+    background-image: url(../img/main-page/number.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+}
+#numbers-title {
+    width: 30%;
+    height: 80%;
+    margin-left: 5%;
+    font-size: 65px;
+    font-weight: bold;
+}
+#numbers-content {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.number-content-title {
+    font-family: "Archivo+Black";
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#contact-us {
+    background-color: #24463A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.contact-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+}
+#contact-us-title {
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 60px;
+}
+#contact-us-link {
+    height: 75%;
+    justify-content: center;
+}
+#contact-us-links {font-weight: 700;}
+
+/**/
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Buttons */
+.button {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: white;
+    color: white;
+    font-size: 20px;
+}
+.button:hover {
+    background-color: #24463A;
+    color: white;
+}
+#main-page-btn {padding: 1% 10%;}
+#contact-btn {padding: 2% 15%;}
+
+/* Fix it */
+a:hover {color: white;}
