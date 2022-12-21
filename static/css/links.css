@@ -1,19 +1,32 @@
-.links {
-    padding: 5%;
-}
-#links-title {
+.navigation {padding: 5%;}
+#navigation-title {
     font-family: "Quicksand";
     font-size: 80px;
     padding: 2%;
 }
-#links-links {
+#navigation-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-.links-link {
+.navigation-btn {
     width: 33%;
     color: black;
     padding: 2%;
     font-size: x-large;
+    background: #0000;
+    border: none;
+    display: flex;
+    text-align: start;
 }
+.navigation-btn:hover {
+    background-color:#24463A;
+    color: white;
+
+}
+
+
+#links {padding: 5%;}
+.link {padding: 2%;}
+.link-title {font-size: x-large;}
+.link-content {}

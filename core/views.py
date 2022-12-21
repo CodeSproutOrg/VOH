@@ -9,3 +9,8 @@ def index(request):
 def links(request):
     data = {"title": "Links of Hope"}
     return render(request, "pages/links.html", context=data)
+
+
+def help_us(request):
+    data = {"title": "Help Us"}
+    return render(request, "pages/help-us.html", context=data)

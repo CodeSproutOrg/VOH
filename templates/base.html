@@ -6,17 +6,18 @@
     <title>{{ title }}</title>
     {% include 'base_part/css.html' %}
 </head>
-<header>
-    <div style="display: flex; justify-content: space-evenly; align-items: center; flex-direction: row; height: 100%;">
-        <a href="/" class='header-links'>HOME</a>
-        <a href="/links" class='header-links'>LINKS</a>
-        <a href="/" class='header-links'>HELP US</a>
-    </div>
-</header>
-<body style="margin-top: 50px;">
-    <main>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-evenly; align-items: center; flex-direction: row; height: 100%;">
+            <a href="/" class='header-links'>HOME</a>
+            <a href="/links" class='header-links'>LINKS</a>
+<!--            <a href="/" class='header-links'>VOICES OF HOPE</a>-->
+<!--            <a href="/" class='header-links'>POSTS</a>-->
+            <a href="/help-us" class='header-links'>HELP US</a>
+        </div>
+    </header>
+    <main style="margin-top: 50px;">
         {% block content %}{% endblock %}
     </main>
-    {% include 'base_part/js.html' %}
 </body>
 </html>

@@ -1,36 +1,50 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<div class="links">
-    <h1 id="links-title">Links</h1>
-    <div id="links-links">
-        <a href="" class="links-link">Collaborative Divorce Resources</a>
-        <a href="" class="links-link">Collaborative Co-parenting Mediation Resources</a>
-        <a href="" class="links-link">Assessments and Screeners</a>
-        <a href="" class="links-link">Consultation and Therapy Services</a>
-        <a href="" class="links-link">Co-parenting Mediation Program</a>
+<div class="navigation">
+    <h1 id="navigation-title">Links</h1>
+    <div id="navigation-links">
+        <button class="navigation-btn">Collaborative Divorce Resources</button>
+        <button class="navigation-btn">Collaborative Co-parenting Mediation Resources</button>
+        <button class="navigation-btn">Assessments and Screeners</button>
+        <button class="navigation-btn">Consultation and Therapy Services</button>
+        <button class="navigation-btn">Co-parenting Mediation Program</button>
     </div>
 </div>
-<div class="links">
+
+<div id="links">
     <div class="link">
-        <h1>Collaborative Divorce Resources</h1>
-        <a>link</a>
+        <h1 class="link-title">Collaborative Divorce Resources</h1>
+        <div class="link-content">
+            <a>link</a>
+        </div>
     </div>
     <div class="link">
-        <h1>Collaborative Co-parenting Mediation Resources</h1>
-        <a>link</a>
+        <h1 class="link-title">Collaborative Co-parenting Mediation Resources</h1>
+        <div class="link-content">
+            <a >link</a>
+        </div>
     </div>
     <div class="link">
-        <h1>Assessments and Screeners</h1>
-        <a>link</a>
+        <h1 class="link-title">Assessments and Screeners</h1>
+        <div class="link-content">
+            <a >link</a>
+        </div>
     </div>
     <div class="link">
-        <h1>Consultation and Therapy Services</h1>
-        <a>link</a>
+        <h1 class="link-title">Consultation and Therapy Services</h1>
+        <div class="link-content">
+            <a >link</a>
+        </div>
     </div>
     <div class="link">
-        <h1>Co-parenting Mediation Program</h1>
-        <a>link</a>
+        <h1 class="link-title">Co-parenting Mediation Program</h1>
+        <div class="link-content">
+            <a >link</a>
+        </div>
     </div>
 </div>
+
+<script src="{% static 'js/links.js' %}"></script>
 {% endblock %}

@@ -1,5 +1,5 @@
-let scroll_button = document.getElementById('main-page-btn')
-let scroll_to = document.getElementById('contact-us-title')
+let scroll_button = document.getElementById('main-page-btn');
+let scroll_to = document.getElementById('contact-us-title');
 
 scroll_button = scroll_button.addEventListener('click', scroll)
 

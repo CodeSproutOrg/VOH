@@ -3,10 +3,6 @@
     .title {font-size: 45px;}
     #numbers-title {font-size: 55px;}
     #contact-us-title {font-size: 85px;}
-}
-
-@media screen and (max-width: 820px) {
-    p {font-size: 16px;}
 
     #who-we-are {
         align-items: center;
@@ -15,6 +11,12 @@
     }
     #who-we-are-content {width: 90%;}
     #who-we-are-img {display: none;}
+}
+
+@media screen and (max-width: 820px) {
+    p {font-size: 16px;}
+
+
 
     #main-fight {}
     #fights {flex-direction: column; align-items: center;}
@@ -56,6 +58,10 @@
 @media screen and (max-width: 760px) {
     .number-content { flex-direction: column; }
     .number-content-text { text-align: center; }
+
+    #navigation-title {font-size: 60px;}
+    .navigation-btn {font-size: large;}
+    .link-title {font-size: large;}
 }
 
 @media screen and (max-width: 430px) {
