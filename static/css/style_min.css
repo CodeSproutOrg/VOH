@@ -1,6 +1,7 @@
 @media screen and (max-width: 940px) {
-    p {font-size: 14px;}
+    p {font-size: 18px;}
     .title {font-size: 45px;}
+    #numbers-title {font-size: 55px;}
     #contact-us-title {font-size: 85px;}
 }
 
@@ -55,4 +56,16 @@
 @media screen and (max-width: 760px) {
     .number-content { flex-direction: column; }
     .number-content-text { text-align: center; }
+}
+
+@media screen and (max-width: 430px) {
+    p {font-size: 14px;}
+    #mane-page-title {font-size: 65px;}
+    #numbers-title {font-size: 42px;}
+    .number-content-title {font-size: 32px;}
+    #contact-us-title{font-size: 50px;}
+}
+
+@media screen and (max-width: 380px) {
+    .title {font-size: 40px;}
 }
