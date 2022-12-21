@@ -1,0 +1,19 @@
+.links {
+    padding: 5%;
+}
+#links-title {
+    font-family: "Quicksand";
+    font-size: 80px;
+    padding: 2%;
+}
+#links-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.links-link {
+    width: 33%;
+    color: black;
+    padding: 2%;
+    font-size: x-large;
+}

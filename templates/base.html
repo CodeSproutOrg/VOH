@@ -6,13 +6,15 @@
     <title>{{ title }}</title>
     {% include 'base_part/css.html' %}
 </head>
-<body>
+<header>
+    <div style="display: flex; justify-content: space-evenly; align-items: center; flex-direction: row; height: 100%;">
+        <a href="/" class='header-links'>HOME</a>
+        <a href="/links" class='header-links'>LINKS</a>
+    </div>
+</header>
+<body style="margin-top: 50px;">
     <main>
-        {% include 'pages/main-page.html' %}
-        {% include 'pages/who-we-are.html' %}
-        {% include 'pages/fight.html' %}
-        {% include 'pages/numbers.html' %}
-        {% include 'pages/contact-us.html' %}
+        {% block content %}{% endblock %}
     </main>
     {% include 'base_part/js.html' %}
 </body>

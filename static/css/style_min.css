@@ -1,0 +1,58 @@
+@media screen and (max-width: 940px) {
+    p {font-size: 14px;}
+    .title {font-size: 45px;}
+    #contact-us-title {font-size: 85px;}
+}
+
+@media screen and (max-width: 820px) {
+    p {font-size: 16px;}
+
+    #who-we-are {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #who-we-are-content {width: 90%;}
+    #who-we-are-img {display: none;}
+
+    #main-fight {}
+    #fights {flex-direction: column; align-items: center;}
+    #main-fight-title {width: unset; text-align: center}
+    .fight {align-items: center;}
+    .fight-text {padding: 0%}
+
+    .img {width: 15rem;}
+    /*.fight {flex-direction: row;}*/
+    /*.fight-img {display: none;}*/
+
+    #numbers {
+        background-position: right center;
+        flex-direction: column;
+    }
+    #numbers-title {
+        width: unset;
+        height: unset;
+        margin-left: 0%;
+        text-align: center;
+    }
+    #numbers-content {
+        display: block;
+        height: 85%;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .number-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .number-content-title {width: 50%; text-align: center;}
+    .number-content-text {width: 50%;}
+
+    #contact-us-title {font-size: 75px;}
+}
+
+@media screen and (max-width: 760px) {
+    .number-content { flex-direction: column; }
+    .number-content-text { text-align: center; }
+}
