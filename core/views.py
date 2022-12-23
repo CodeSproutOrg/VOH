@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post
+from .models import Post, Link
 
 
 def index(request):
@@ -13,7 +13,7 @@ def posts(request):
 
 
 def links(request):
-    data = {"title": "Links of Hope"}
+    data = {"title": "Links of Hope", 'links': Link.objects.all()}
     return render(request, "pages/links.html", context=data)
 
 
