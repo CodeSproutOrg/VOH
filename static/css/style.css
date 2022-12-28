@@ -10,7 +10,14 @@ header {
 .header-links {color: #F4F1EC}
 
 /* Colors */
-a:hover {color: #AAAAAA;}
+/**/
+h1 {font-size: x-large;}
+p {font-size: 16px;}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {color: gray;}
 .color {color: #CBB2A4;}
 .second-color {color: white;}
 .b-color {background-color: #CBB2A4;}
@@ -25,4 +32,5 @@ a:hover {color: #AAAAAA;}
 #error-back-href {
     font-family: "Quicksand";
     font-size: 40px;
+    color: black;
 }

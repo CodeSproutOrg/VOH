@@ -144,14 +144,17 @@
     justify-content: center;
 }
 #contact-us-links {font-weight: 700;}
-
-/**/
-a {
-    color: white;
-    text-decoration: none;
+#contact-btn {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: white;
+    padding: 2% 15%;
+    font-size: 20px;
 }
-h1 {font-size: x-large;}
-p {font-size: 16px;}
+#contact-btn:hover {
+    border: 1px solid;
+    border-color: gray;
+}
 
 
 /* Buttons */
@@ -169,16 +172,4 @@ p {font-size: 16px;}
     font-size: 15px;
     border-color: white;
     color: white;
-}
-
-
-#contact-btn {
-    background-color: transparent;
-    border: none;
-    padding: 2% 15%;
-    font-size: 20px;
-}
-#contact-btn:hover {
-    border: 1px solid;
-    border-color: white;
 }
