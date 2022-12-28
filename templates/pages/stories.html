@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="user-form">
+    <div>
+        <h1 id="user-form-title" class="color">User form</h1>
+        <p id="user-form-text" class="color">Tell us you're story</p>
+    </div>
+    <form method="post" class="b-color">
+        {% csrf_token %}
+        {% for fild in form %}
+        <div class="field">
+            {{ fild }}
+        </div>
+        {% endfor %}
+        <button type="submit" id="submit-btn">Send</button>
+    </form>
+</div>
+{% endblock %}

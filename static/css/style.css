@@ -3,8 +3,26 @@ header {
     position: fixed;
     z-index: 1;
     width: 100%;
-    height: 50px;
-    background-color: #24463A;;
+    height: 60px;
+    background-color: #CBB2A4;
     top:0;
 }
 .header-links {color: #F4F1EC}
+
+/* Colors */
+a:hover {color: #AAAAAA;}
+.color {color: #CBB2A4;}
+.second-color {color: white;}
+.b-color {background-color: #CBB2A4;}
+
+
+/* Error */
+#error {padding: 5%;}
+#error-message {
+    font-family: "Quicksand";
+    font-size: 80px;
+}
+#error-back-href {
+    font-family: "Quicksand";
+    font-size: 40px;
+}

@@ -3,7 +3,9 @@ from django.db import models
 
 
 class Post(models.Model):
+
     """ Model of post """
+
     title = models.CharField(max_length=20)
     post = models.TextField(null=False)
     time = models.DateTimeField(default=datetime.datetime.now())
@@ -16,6 +18,7 @@ class Post(models.Model):
 
 
 class Link(models.Model):
+
     """ Model of link """
 
     Collaborative_Divorce_Resources = 'Collaborative Divorce Resources'
@@ -41,3 +44,18 @@ class Link(models.Model):
 
     def __str__(self):
         return f'Link {self.url_title}'
+
+
+class UserPost(models.Model):
+
+    """ Model of users post """
+
+    name = models.CharField(max_length=20, default="Anonim")
+    post = models.TextField(null=False)
+
+    class Meta:
+        verbose_name = 'User Post'
+        verbose_name_plural = 'User Posts'
+
+    def __str__(self):
+        return f'Post of {self.name}'

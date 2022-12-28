@@ -1,13 +1,10 @@
-#posts {
-    padding: 5%;
-}
+#posts {padding: 5%;}
 #posts-title {
     font-family: "Quicksand";
     font-size: 80px;
     padding: 3%;
 }
 .post {
-    background: #24463A;
     padding: 2%;
     margin: 2% 3%;
     color: white;

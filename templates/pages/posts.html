@@ -3,9 +3,9 @@
 
 {% block content %}
 <div id="posts">
-    <h1 id="posts-title">Posts</h1>
+    <h1 id="posts-title" class="color">Posts</h1>
     {% for post in posts %}
-    <div class="post">
+    <div class="post b-color">
         <h1 class="post-title">{{ post.title }}</h1>
         <p class="post-time">{{ post.time }}</p>
         <p class="post-p">{{ post.post }}</p>
