@@ -10,17 +10,29 @@ header {
 .header-links {color: #F4F1EC}
 
 /* Colors */
-/**/
 h1 {font-size: x-large;}
 p {font-size: 16px;}
 a {
-    color: white;
+    color: #ababab;
     text-decoration: none;
 }
-a:hover {color: gray;}
+a:hover {color: #ababab;}
 .color {color: #CBB2A4;}
 .second-color {color: white;}
 .b-color {background-color: #CBB2A4;}
+
+/* Stories Add */
+#stories-add {
+    font-family: "Quicksand";
+    font-size: 80px;
+    padding: 3%;
+}
+#stories-add-back {
+    font-family: "Quicksand";
+    font-size: 30px;
+    padding: 3%;
+    color: #ababab;
+}
 
 
 /* Error */

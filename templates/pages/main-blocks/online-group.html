@@ -1,0 +1,31 @@
+{% load static %}
+
+<div id="online-group">
+    <div id="online-group-content">
+        <h1 id="online-group-title" class="color">Online group</h1>
+        <p class="online-group-text">
+            We want the topic of parental alienation to be thoroughly
+            covered. To help you, we hold online group sessions.
+        </p>
+        <p class="online-group-text">
+            The cost of one session is 7 dollars. To sign
+            up for a session, please fill out the form.
+        </p>
+        <button id="sign-up-btn" class="color">Sign Up</button>
+    </div>
+    <img src="{% static 'img/main-page/online-group.png' %}" alt="" id="online-group-img">
+</div>
+
+<div id="modal" class="b-color">
+    <div id="close-modal-div"><button id="close-modal">x</button></div>
+    <h2 id="modal-title" class="">Write to us right now</h2>
+    <p  id='modal-text' class="second-color">
+        Our employee will contact you as soon as
+        there is an open spot in the group.
+    </p>
+    <form method="post" id='modal-form' class="b-color">
+        {% csrf_token %}
+        <input id="modal-email" name="email" placeholder="Email">
+        <button type="submit" id="submit-btn">Send</button>
+    </form>
+</div>

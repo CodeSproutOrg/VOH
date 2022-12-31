@@ -11,7 +11,7 @@
 }
 .navigation-btn {
     width: 33%;
-    color: black;
+    color: #ababab;
     padding: 2%;
     font-size: x-large;
     background: #0000;
@@ -27,6 +27,6 @@
 
 #links {padding: 5%;}
 .link {padding: 2%;}
-.link-title {font-size: x-large;}
+.link-title {font-size: x-large; color: #CBB2A4}
 .link-content {}
-.link-content-link {color: black;}
+.link-content-link {color: #ababab;}

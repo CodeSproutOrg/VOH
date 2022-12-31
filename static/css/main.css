@@ -55,6 +55,7 @@
     border-color: #CBB2A4;
 }
 
+/* Fight */
 #main-fight {
     padding: 5%;
     display: flex;
@@ -86,6 +87,73 @@
 }
 .fight-img {border: 3px solid;}
 
+/* Online-group */
+#online-group {display: flex;}
+#online-group-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10%;
+}
+#online-group-title {
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: "Archivo+Black";
+}
+.online-group-text {
+    font-size: 18px;
+    margin-top: 2%;
+}
+#sign-up-btn {
+    margin-top: 5%;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: #CBB2A4;
+    font-size: 20px;
+    padding: 0 10%;
+}
+#sign-up-btn:hover {}
+#online-group-img { width:50%; }
+
+#modal {
+    padding: 1% 5% 5% 5%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+#close-modal-div {
+    margin: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+#close-modal {
+    margin: 1% 5%;
+    font-size: 25px;
+    border: none;
+    background-color: #0000;
+    color: white;
+}
+#modal-form {padding: 2% 5% 5% 5%;}
+#modal-title {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: "Archivo+Black";
+}
+#modal-text {text-align: center;}
+#modal-email {
+    margin-bottom: 5%;
+    width: 100%;
+    padding: 5%;
+    border-color: white;
+    border: 1px solid;
+}
+
+/* Numbers */
 #numbers {
     height: 40rem;
     padding: 5%;
@@ -115,7 +183,7 @@
 .number-content-title {
     font-family: "Archivo+Black";
     font-weight: bolder;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 #contact-us {
@@ -150,11 +218,14 @@
     border-color: white;
     padding: 2% 15%;
     font-size: 20px;
+    color: white;
 }
 #contact-btn:hover {
     border: 1px solid;
-    border-color: gray;
+    border-color: #ababab;
+    color: #ababab;
 }
+.contact-a {color: white;}
 
 
 /* Buttons */

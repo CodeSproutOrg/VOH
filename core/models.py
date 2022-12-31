@@ -50,7 +50,7 @@ class UserPost(models.Model):
 
     """ Model of users post """
 
-    name = models.CharField(max_length=20, default="Anonim")
+    name = models.CharField(max_length=20)
     post = models.TextField(null=False)
 
     class Meta:

@@ -30,5 +30,5 @@ form {padding:5%;}
 
 input {border-width: 0 0 1px 0; border-color: white; width: 100%; background-color: #0000; color: white;}
 input::placeholder {color: white; opacity: 1;}
-textarea {border: none; width: 100%; background-color: #0000; color:white;}
+textarea {border: none; width: 100%; background-color: #0000; color: white;}
 textarea::placeholder {color:white; opacity: 1;}

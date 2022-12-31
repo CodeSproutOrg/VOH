@@ -1,12 +1,17 @@
-from django.http import HttpResponseNotFound
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .forms import UserPostForm
 from .models import Post, Link
+from .mail_notification import new_story_notification, signing_up_for_an_online_group_notification
 
 
 def index(request):
-    data = {"title": "Voices of Hope"}
+    form = UserPostForm()
+    data = {"title": "Voices of Hope", "forms": form}
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        signing_up_for_an_online_group_notification(email)
+        return render(request, "pages/main.html", context=data)
     return render(request, "pages/main.html", context=data)
 
 
@@ -21,9 +26,17 @@ def stories(request):
     if request.method == "POST":
         new_post = UserPostForm(request.POST)
         if new_post.is_valid():
+            name = new_post.cleaned_data['name']
+            story = new_post.cleaned_data['post']
             new_post.save()
-            return render(request, 'pages/stories.html', context=data)
+            new_story_notification(name, story)
+            return redirect('/stories_add')
     return render(request, "pages/stories.html", context=data)
+
+
+def stories_add(request):
+    data = {"title": "Stories was add", }
+    return render(request, "pages/stories_add.html", context=data)
 
 
 def links(request):
