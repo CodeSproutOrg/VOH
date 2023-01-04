@@ -9,9 +9,10 @@
 
 #help-us {padding: 5%;}
 #help-us-title {
-    font-family: "Quicksand";
+    /*font-family: "Quicksand";*/
     font-size: 80px;
     margin-bottom: 5%;
+    padding: 0 3%;
 }
 #help-us-pay {
     display: flex;
@@ -29,8 +30,8 @@
     font-size: 20px;
 }
 .help-us-btn:hover {
-    border-color: #ababab;
-    color: #ababab;
+    border-color: black;
+    color: black;
 }
 
 
@@ -40,7 +41,7 @@
     space-between;
     padding: 5%;
 }
-.help-us-dev-btn {
+#help-us-dev-btn {
     width: 180px;
     padding: 2% 5%;
     border-color: white;
@@ -50,4 +51,5 @@
     color: white;
     font-size: 20px;
 }
+#help-us-dev-btn:hover {border-color: black;}
 #help-us-developer-img {width: 20%;}

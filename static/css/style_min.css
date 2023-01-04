@@ -91,6 +91,10 @@
     #contact-us-title {font-size: 65px;}
 }
 
+@media screen and (max-width: 570px) {
+    .navigation-btn {width: 48%; padding: 5%;}
+}
+
 @media screen and (max-width: 430px) {
     p {font-size: 14px;}
     #mane-page-title {font-size: 65px;}
@@ -105,4 +109,5 @@
 
 @media screen and (max-width: 380px) {
     .title {font-size: 40px;}
+    #navigation-links {flex-direction: column;}
 }

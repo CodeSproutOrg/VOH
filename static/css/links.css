@@ -1,18 +1,19 @@
 .navigation {padding: 5%;}
 #navigation-title {
-    font-family: "Quicksand";
+    /*font-family: "Quicksand";*/
     font-size: 80px;
-    padding: 2%;
+    padding: 0 3%;
 }
 #navigation-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding: 0 3%;
 }
 .navigation-btn {
     width: 33%;
     color: #ababab;
-    padding: 2%;
+    padding: 2% 1%;
     font-size: x-large;
     background: #0000;
     border: none;
@@ -25,8 +26,11 @@
 }
 
 
-#links {padding: 5%;}
+#links {padding: 0 6%;}
 .link {padding: 2%;}
-.link-title {font-size: x-large; color: #CBB2A4}
+.link-title {
+    font-size: x-large;
+    color: #CBB2A4
+}
 .link-content {}
 .link-content-link {color: #ababab;}
