@@ -96,7 +96,12 @@
     align-items: center;
     padding: 5%;
 }
-.fight-img {border: 3px solid;}
+.fight-text h3 {
+    width: 100%;
+    margin: 5%;
+    vertical-align: middle;
+}
+.fight img {border: 3px solid;}
 
 /* Online-group */
 #online-group {display: flex;}
