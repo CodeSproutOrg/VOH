@@ -8,6 +8,7 @@ header {
     top:0;
 }
 .header-links {color: #F4F1EC}
+main {margin-top: 50px;}
 
 /* Colors */
 h1 {font-size: x-large;}
@@ -21,19 +22,6 @@ a:hover {color: #ababab;}
 .second-color {color: white;}
 .b-color {background-color: #CBB2A4;}
 
-/* Stories Add */
-#stories-add {
-    font-family: "Quicksand";
-    font-size: 80px;
-    padding: 3%;
-}
-#stories-add-back {
-    font-family: "Quicksand";
-    font-size: 30px;
-    padding: 3%;
-    color: #ababab;
-}
-
 
 /* Error */
 #error {padding: 5%;}
@@ -45,4 +33,17 @@ a:hover {color: #ababab;}
     font-family: "Quicksand";
     font-size: 40px;
     color: black;
+}
+
+/* Shadow */
+.shadow {
+    text-shadow:
+        0 0 1px #fff,
+        0 0 2px #fff,
+        0 0 5px #fff,
+        0 0 11px #dee2e6,
+        0 0 20px #e9ecef,
+        0 0 30px #6c757d,
+        0 0 55px #6c757d,
+        0 0 80px #e9ecef;
 }

@@ -33,7 +33,38 @@ form {
     color: white;
 }
 
-input {border-width: 0 0 1px 0; border-color: white; width: 100%; background-color: #0000; color: white;}
-input::placeholder {color: white; opacity: 1;}
-textarea {border: none; width: 100%; background-color: #0000; color: white;}
-textarea::placeholder {color:white; opacity: 1;}
+input {
+    border-width: 0 0 1px 0;
+    border-color: white;
+    width: 100%;
+    background-color: #0000;
+    color: white;
+}
+input::placeholder {
+    color: white;
+    opacity: 1;
+}
+textarea {
+    border: none;
+    width: 100%;
+    background-color: #0000;
+    color: white;
+}
+textarea::placeholder {
+    color:white;
+    opacity: 1;
+}
+
+
+/* Stories Add */
+#stories-add {
+    font-family: "Quicksand";
+    font-size: 80px;
+    padding: 3%;
+}
+#stories-add-back {
+    font-family: "Quicksand";
+    font-size: 30px;
+    padding: 3%;
+    color: #ababab;
+}

@@ -54,6 +54,8 @@
 }
 
 @media screen and (max-width: 760px) {
+    #mane-page-title {font-size: 65px;}
+    #online-group-img {display: none;}
     .number-content { flex-direction: column; }
     .number-content-text { text-align: center; }
     .number-content-title {font-size: 35px;}
@@ -74,25 +76,25 @@
         flex-direction: column;
         align-items: center;
     }
-}
 
-@media screen and (max-width: 760px) {
-    #mane-page-title {font-size: 65px;}
-    #online-group-img {display: none;}
+
 }
 
 @media screen and (max-width: 610px) {
+    /* Main page */
     p {font-size: 15px;}
-
     #mane-page-title { font-size: 60px;}
-
     .number-content-title {font-size: 25px;}
-
     #contact-us-title {font-size: 65px;}
+
+    #user-form-title {font-size: 60px;}
+    .user-form-text {font-size: 20px;}
 }
 
 @media screen and (max-width: 570px) {
     .navigation-btn {width: 48%; padding: 5%;}
+
+
 }
 
 @media screen and (max-width: 430px) {

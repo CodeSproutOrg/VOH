@@ -1,5 +1,5 @@
 /venv
 /.idea
 
+/server.log
 /config.py
-/TODO.txt

@@ -6,7 +6,7 @@ from core.views import pageNotFound
 handler404 = pageNotFound
 
 urlpatterns = [
-    path('', views.index, name='home'),
+    path('', views.index, name='main'),
     path('posts', views.posts, name='posts'),
     path('stories', views.stories, name='stories'),
     path('stories_add', views.stories_add, name='stories_add'),
