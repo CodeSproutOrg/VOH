@@ -3,7 +3,6 @@ from django.db import models
 
 
 class Post(models.Model):
-
     """ Model of post """
 
     title = models.CharField(max_length=20)
@@ -18,7 +17,6 @@ class Post(models.Model):
 
 
 class Link(models.Model):
-
     """ Model of link """
 
     Collaborative_Divorce_Resources = 'Collaborative Divorce Resources'
@@ -47,11 +45,30 @@ class Link(models.Model):
 
 
 class UserPost(models.Model):
-
     """ Model of users post """
 
-    name = models.CharField(max_length=20)
-    post = models.TextField(null=False)
+    ABUSE_FROM_CPS_DCFS = [
+        ('Substantiated', 'Substantiated abuse from CPS/DCFS'),
+        ('Unsubstantiated', 'Unsubstantiated abuse from CPS/DCFS')
+    ]
+    CONFIRMED_PARENTAL_ALIENATION = [('Mild', 'Mild'), ('Moderate', 'Moderate'), ('Severe', 'Severe')]
+    YES_NO = [('Yes', 'Yes'), ('No', 'No')]
+
+    name = models.CharField(max_length=20, blank=True, verbose_name='name')
+    case = models.TextField(verbose_name='case', )
+    abuse_from_CPS_DCFS = models.CharField(max_length=36, default='Substantiated abuse from CPS/DCFS',
+                                           choices=ABUSE_FROM_CPS_DCFS, verbose_name='abuse from CPS/DCFS')
+    parental_alienation = models.CharField(max_length=10, default='Yes', choices=CONFIRMED_PARENTAL_ALIENATION,
+                                           verbose_name='Mild')
+    allegations = models.CharField(max_length=5, choices=YES_NO, default='No',
+                                   verbose_name='allegations of parental alienation')
+    falsified = models.CharField(max_length=5, choices=YES_NO, default='No',
+                                 verbose_name='falsified of parental alienation')
+    duration = models.TextField(verbose_name='duration')
+    money = models.TextField(verbose_name='money')
+    left_broken = models.TextField(verbose_name='left broken')
+    abuse_criteria = models.TextField(verbose_name='abuse criteria')
+    result = models.TextField(verbose_name='result')
 
     class Meta:
         verbose_name = 'User Post'

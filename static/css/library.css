@@ -1,9 +1,11 @@
-.navigation {padding: 5%;}
-#navigation-title {
-    /*font-family: "Quicksand";*/
-    font-size: 80px;
+.title {
     padding: 0 3%;
+    font-size: 80px;
+    font-weight: 400;
 }
+
+
+#navigation {padding: 5%;}
 #navigation-links {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +14,6 @@
 }
 .navigation-btn {
     width: 33%;
-    color: #ababab;
     padding: 2% 1%;
     font-size: x-large;
     background: #0000;
@@ -26,11 +27,13 @@
 }
 
 
-#links {padding: 0 6%;}
+#links {padding: 0 5% 3% 5%;}
 .link {padding: 2%;}
-.link-title {
-    font-size: x-large;
-    color: #CBB2A4
-}
-.link-content {}
-.link-content-link {color: #ababab;}
+.link-title {font-size: x-large;}
+.link-content-link {}
+
+
+#videos {padding: 5%;}
+#videos h1 {}
+#videos p {padding: 0 3%;}
+iframe {padding: 0 3%; width: 100%; height: 350px;}

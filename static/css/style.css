@@ -9,6 +9,10 @@ header {
 }
 .header-links {color: #F4F1EC}
 main {margin-top: 50px;}
+.title {
+    font-size: 80px;
+    padding: 3%;
+}
 
 /* Colors */
 h1 {font-size: x-large;}
@@ -20,6 +24,7 @@ a {
 a:hover {color: #ababab;}
 .color {color: #CBB2A4;}
 .second-color {color: white;}
+.third-color {color: #ababab;}
 .b-color {background-color: #CBB2A4;}
 
 

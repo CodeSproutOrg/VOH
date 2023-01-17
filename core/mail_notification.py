@@ -1,9 +1,9 @@
 from django.core.mail import send_mail
 
 
-def new_story_notification(name: str, post: str) -> str:
-    send_mail('New story was sent',
-              f'{name}\n{post}',
+def new_story_notification(name: str) -> str:
+    send_mail('New voices was sent',
+              f'New Voices of Hope was added by {name}',
               'empowermentonlline@gmail.com',
               ['empowermentonlline@gmail.com', ]
               )
