@@ -84,13 +84,16 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-
+# Static files
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'documents')
+MEDIA_URL = '/documents/'
 
 # Email notifications
 EMAIL_HOST = 'smtp.gmail.com'

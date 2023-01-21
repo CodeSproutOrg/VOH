@@ -54,12 +54,18 @@
     padding: 5%;
     text-align: center;
 }
-#who-we-are-text {}
+#who-we-are-text button {
+    padding: 2% 5%;
+
+    border: 1px solid;
+    border-color: white;
+
+    font-size: 20px;
+}
 #who-we-are-img {
     width: 50%;
     display: flex;
 }
-.who-we-are-img {}
 
 /* Fight */
 #main-fight {
@@ -197,31 +203,20 @@
     font-size: 40px;
 }
 
+/* Contact Us */
 #contact-us {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #F4F1EC;
     height: 40rem;
 }
-.contact-us-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1%;
-}
-#contact-us-title {
+#contact-us h1 {
     font-size: 90px;
     margin-bottom: 5%;
     text-align: center;
 }
-#contact-us-link {
-    height: 75%;
-    justify-content: center;
-}
-#contact-us-links {font-weight: 700;}
-#contact-btn {
+#contact-us-btn {
     background-color: transparent;
     border: 1px solid;
     border-color: white;
@@ -229,12 +224,12 @@
     font-size: 20px;
     color: white;
 }
-#contact-btn:hover {
+#contact-us-btn:hover {
     border: 1px solid;
     border-color: black;
     color: black;
 }
-.contact-a {color: white;}
+
 
 
 /* Buttons */

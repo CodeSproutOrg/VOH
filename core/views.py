@@ -1,4 +1,7 @@
+import os
 import logging
+
+from django.http import FileResponse
 from django.shortcuts import render, redirect
 
 from .forms import UserPostForm
@@ -24,14 +27,31 @@ def index(request):
     return render(request, template, context=data)
 
 
-def library(request):
-    template = "pages/library.html"
-    data = {"title": "Links of Hope", 'links': Link.objects.all()}
+def resources(request):
+    template = "pages/resources.html"
+
+    # Files
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    documents_list = os.listdir(f'{base_dir}/documents/')
+
+    data = {
+        "title": "Resources of Hope",
+        'links': Link.objects.all(),
+        'documents': documents_list,
+    }
     return render(request, template, context=data)
 
 
-def posts(request):
-    template = 'pages/posts.html'
+def download_file(request, file_name):
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    document_path = f'{base_dir}/documents/{file_name}'
+    open_document = open(document_path, 'rb')
+    response = FileResponse(open_document, as_attachment=True, filename=file_name)
+    return response
+
+
+def blog(request):
+    template = 'pages/blog.html'
     data = {"title": "Posts", "posts": Post.objects.all()}
     return render(request, template, context=data)
 
@@ -39,6 +59,7 @@ def posts(request):
 def stories(request):
     template = "pages/stories.html"
     form = UserPostForm()
+
     data = {"title": "Posts", 'form': form}
     if request.method == "POST":
         new_post = UserPostForm(request.POST)

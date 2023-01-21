@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Link, UserPost
+from .models import Post, Link, UserPost, File
 
 
 @admin.register(Link)
@@ -9,3 +9,4 @@ class LinkAdmin(admin.ModelAdmin):
 
 admin.site.register(Post)
 admin.site.register(UserPost)
+admin.site.register(File)

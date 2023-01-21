@@ -55,11 +55,11 @@ class UserPost(models.Model):
     YES_NO = [('Yes', 'Yes'), ('No', 'No')]
 
     name = models.CharField(max_length=20, blank=True, verbose_name='name')
-    case = models.TextField(verbose_name='case', )
+    case = models.TextField(verbose_name='case')
     abuse_from_CPS_DCFS = models.CharField(max_length=36, default='Substantiated abuse from CPS/DCFS',
                                            choices=ABUSE_FROM_CPS_DCFS, verbose_name='abuse from CPS/DCFS')
-    parental_alienation = models.CharField(max_length=10, default='Yes', choices=CONFIRMED_PARENTAL_ALIENATION,
-                                           verbose_name='Mild')
+    parental_alienation = models.CharField(max_length=10, default='Yes', verbose_name='Mild',
+                                           choices=CONFIRMED_PARENTAL_ALIENATION)
     allegations = models.CharField(max_length=5, choices=YES_NO, default='No',
                                    verbose_name='allegations of parental alienation')
     falsified = models.CharField(max_length=5, choices=YES_NO, default='No',
@@ -76,3 +76,17 @@ class UserPost(models.Model):
 
     def __str__(self):
         return f'Post of {self.name}'
+
+
+class File(models.Model):
+    """ Model of file """
+
+    name = models.CharField(max_length=255, verbose_name='Name of file')
+    path = models.FileField(upload_to='', null=True)
+
+    class Meta:
+        verbose_name = 'File'
+        verbose_name_plural = 'Files'
+
+    def __str__(self):
+        return self.name

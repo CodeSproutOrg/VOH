@@ -9,7 +9,8 @@
 <body>
     {% include 'base_part/header.html' %}
     <main>
-        {% block content %}{% endblock %}
+        <div id="content">{% block content %}{% endblock %}</div>
+        {% include 'base_part/footer.html' %}
     </main>
 </body>
 </html>
