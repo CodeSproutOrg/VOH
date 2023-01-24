@@ -57,12 +57,3 @@ class TestStoriesView(TestCase):
         response = self.client.post(reverse('stories'), data=data)
         self.assertEqual(UserPost.objects.count(), 1)
         self.assertEqual(response.status_code, 302)
-
-
-class TestHelpUsView(TestCase):
-    """ Testing links view """
-
-    def test_get(self):
-        response = self.client.get(reverse('help-us'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'pages/help-us.html')

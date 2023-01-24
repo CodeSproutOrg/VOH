@@ -12,6 +12,5 @@ urlpatterns = [
     path('stories_add', views.stories_add, name='stories_add'),
     path('resources', views.resources, name='resources'),
     path('resources/<str:file_name>/', views.download_file, name='download_file'),
-    path('help-us', views.help_us, name='help-us'),
     path('admin/', admin.site.urls),
 ]

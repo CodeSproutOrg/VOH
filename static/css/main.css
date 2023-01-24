@@ -20,7 +20,6 @@
     color: white;
 }
 #mane-page-title {
-    /*font-family: "Quicksand";*/
     font-size: 80px;
     text-align: center;
 }
@@ -43,16 +42,18 @@
 
 /* Who we are */
 #who-we-are {
-    background: #F4F1EC;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+    background-image: url(../img/main-page/who-we-are-1.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #F4F1EC;
  }
 #who-we-are-content {
-    width: 45%;
+    width: 50%;
     padding: 5%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #who-we-are-text button {
     padding: 2% 5%;
@@ -62,10 +63,7 @@
 
     font-size: 20px;
 }
-#who-we-are-img {
-    width: 50%;
-    display: flex;
-}
+
 
 /* Fight */
 #main-fight {
@@ -117,7 +115,6 @@
 #online-group-title {
     font-size: 50px;
     font-weight: bolder;
-    /*font-family: "Archivo+Black";*/
 }
 .online-group-text {
     font-size: 18px;
@@ -226,8 +223,8 @@
 }
 #contact-us-btn:hover {
     border: 1px solid;
-    border-color: black;
-    color: black;
+    background-color: white;
+    color: #35250E;
 }
 
 

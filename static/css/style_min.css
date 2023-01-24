@@ -5,12 +5,12 @@
     #contact-us-title {font-size: 85px;}
 
     #who-we-are {
+        background-image: none;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
-    #who-we-are-content {width: 90%;}
-    #who-we-are-img {display: none;}
+    #who-we-are-content {width: 100%;}
 }
 
 @media screen and (max-width: 820px) {
@@ -57,7 +57,7 @@
     #mane-page-title {font-size: 65px;}
     #online-group-img {display: none;}
     .number-content { flex-direction: column; }
-    .number-content-text { text-align: center; }
+    .number-content-text { text-align: center; font-size: 13px;}
     .number-content-title {font-size: 35px;}
 
     #navigation-title {font-size: 60px;}
@@ -83,7 +83,7 @@
     p {font-size: 14px;}
     #mane-page-title { font-size: 60px;}
     .number-content-title {font-size: 25px;}
-    #contact-us-title {font-size: 65px;}
+    #contact-us h1 {font-size: 65px;}
 
     #user-form-title {font-size: 60px;}
     .user-form-text {font-size: 20px;}
@@ -91,21 +91,30 @@
 
 @media screen and (max-width: 570px) {
     .navigation-btn {width: 48%; padding: 5%;}
+    #contact-us h1 {font-size: 55px;}
 }
 
 @media screen and (max-width: 430px) {
     p {font-size: 13px;}
-    #mane-page-title {font-size: 65px;}
+    #mane-page-title {font-size: 60px;}
 
     #modal-title {font-size: 45px;}
 
     #numbers-title {font-size: 42px;}
     .number-content-title {font-size: 25px;}
 
-    #contact-us-title{font-size: 50px;}
+    #contact-us h1 {font-size: 50px;}
+
+    #footer-content {flex-direction: column;}
+    #footer-contact {margin-bottom: 5%; align-items: center;}
 }
 
 @media screen and (max-width: 380px) {
     .title {font-size: 40px;}
     #navigation-links {flex-direction: column;}
+
+    .number-content-text {font-size: 12px;}
+
+    #contact-us h1 {font-size: 45px;}
+
 }

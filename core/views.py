@@ -78,12 +78,6 @@ def stories_add(request):
     return render(request, template, context=data)
 
 
-def help_us(request):
-    template = "pages/help-us.html"
-    data = {"title": "Help Us"}
-    return render(request, template, context=data)
-
-
 def pageNotFound(request, exception):
     template = "pages/error.html"
     data = {"title": "Ops, something is wrong"}
