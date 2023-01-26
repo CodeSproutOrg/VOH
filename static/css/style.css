@@ -20,11 +20,12 @@ a {
     text-decoration: none;
 }
 a:hover {color: #ababab;}
-.color {color: #38250E;}
+.color {color: #2e1e0b;}
 .second-color {color: white;}
 .third-color {color: #ababab;}
-.b-color {background-color: #38250E;}
+.b-color {background-color: #2e1e0b;}
 
+/* #38250E */
 
 /* Error */
 #error {padding: 5%;}
