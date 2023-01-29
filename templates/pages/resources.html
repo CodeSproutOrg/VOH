@@ -2,95 +2,18 @@
 {% load static %}
 
 {% block content %}
-<div id="navigation">
-    <h1 class="title color">Links</h1>
-    <div id="navigation-links">
-        <button class="navigation-btn third-color">Collaborative Divorce Resources</button>
-        <button class="navigation-btn third-color">Collaborative Co-parenting Mediation Resources</button>
-        <button class="navigation-btn third-color">Assessments and Screeners</button>
-        <button class="navigation-btn third-color">Consultation and Therapy Services</button>
-        <button class="navigation-btn third-color">Co-parenting Mediation Program</button>
+<div id='resources'>
+    <div id='resources-navigation' class="b-color">
+        <button id='link-btn' class="resources-navigation-btn second-color">Links</button>
+        <button id='video-btn' class="resources-navigation-btn second-color">Videos</button>
+        <button id='document-btn' class="resources-navigation-btn second-color">Documents</button>
+    </div>
+    <div id='resources-content'>
+        {% include 'pages/resources-blocks/links.html' %}
+        {% include 'pages/resources-blocks/videos.html' %}
+        {% include 'pages/resources-blocks/documents.html' %}
     </div>
 </div>
 
-<div id="links" class="">
-    <div class="link">
-        <h1 class="link-title second-color b-color">Collaborative Divorce Resources</h1>
-        {% for link in links %}
-        {% if link.title == 'Collaborative Divorce Resources' %}
-        <div class="link-content">
-            <a href="{{ link.url }}">{{ link.url_title}}</a>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="link">
-        <h1 class="link-title second-color b-color">Collaborative Co-Parenting Mediation Resources</h1>
-        {% for link in links %}
-        {% if link.title == 'Collaborative Co-Parenting Mediation Resources' %}
-        <div class="link-content">
-            <a href="{{ link.url }}">{{link.url_title}}</a>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="link">
-        <h1 class="link-title second-color b-color">Assessments and Screeners</h1>
-        {% for link in links %}
-        {% if link.title == 'Assessments and Screeners' %}
-        <div class="link-content">
-            <a href="{{ link.url }}">{{ link.url_title}}</a>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="link">
-        <h1 class="link-title second-color b-color">Consultation and Therapy Services</h1>
-        {% for link in links %}
-        {% if link.title == 'Consultation and Therapy Services' %}
-        <div class="link-content">
-            <a href="{{ link.url }}">{{ link.url_title}}</a>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="link">
-        <h1 class="link-title second-color b-color">Co-parenting Mediation Program</h1>
-        {% for link in links %}
-        {% if link.title == 'Co-Parenting Mediation Program' %}
-        <div class="link-content">
-            <a href="{{ link.url }}">{{ link.url_title}}</a>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-</div>
-
-<div id="videos" class="b-color">
-    <h1 class="title second-color">YouTube videos</h1>
-    <p class="second-color">
-        Check out our playlists on parental alienation. We
-        tried to collect fascinating and informative
-        videos that would not only open your eyes, but also
-        help you start solving your problem.
-    </p>
-    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            src="https://www.youtube.com/embed/videoseries?list=PLJhPJcXPjBd1W1wMOFsKTMC4uZU02gGsi"
-            title="YouTube video player" frameborder="0" allowfullscreen>
-    </iframe>
-</div>
-
-<div style="padding: 2% 5%;">
-    <h1 class="title color">Documents</h1>
-    <div>
-        {% for document in documents %}
-        <div style="padding: 1% 5%;">
-            <a href="/resources/{{ document }}">{{ document }}</a>
-        </div>
-        {% endfor %}
-    </div>
-
-</div>
-
-<script src="{% static 'js/links.js' %}"></script>
+<script src="{% static 'js/resources.js' %}"></script>
 {% endblock %}
