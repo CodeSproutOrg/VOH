@@ -1,5 +1,5 @@
 /* Resources  */
-#resources {display: flex;}
+#resources {display: flex; height: 100%;}
 
 /* Resources navigation */
 #resources-navigation {
