@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div id="test">
+    <div id="test-description">
+        <h1 class="title color">Parental Alienation Test</h1>
+        <p>
+            This test is designed to determine the presence
+            of parental alienation. It consists of a series
+            of questions related to the relationship between
+            a parent and their child. The questions explore
+            the child's behavior and feelings, as well as the
+            behavior of the other parent, in order to determine
+            if there is any evidence of intentional interference
+            with the parent-child relationship. The results of
+            this test can provide a starting point for further
+            evaluation and intervention to address parental
+            alienation and help restore a healthy relationship
+            between the parent and child.
+        </p>
+    </div>
+    <form method="post" id="test-form">
+        {% csrf_token %}
+        <ol>
+            <li>
+                <p>Are you constantly being criticized or bad-mouthed by your co-parent to your child?</p>
+                <div>
+                    <input type="radio" name="question1" value="1" required><p>Yes</p>
+                    <input type="radio" name="question1" value="0"><p>No</p>
+                </div>
+            </li>
+            <li>
+                <p>
+                    Does your co-parent try to turn your child against you or
+                    prevent your child from having a relationship with you?
+                </p>
+                <div>
+                    <input type="radio" name="question2" value="1" required><p>Yes</p>
+                    <input type="radio" name="question2" value="0"><p>No</p>
+                </div>
+            </li>
+            <li>
+                <p>Does your child seem torn between you and your co-parent, or feel like they have to choose sides?</p>
+                <div>
+                    <input type="radio" name="question3" value="1" required><p>Yes</p>
+                    <input type="radio" name="question3" value="0"><p>No</p>
+                </div>
+            </li>
+            <li>
+                <p>Does your child seem afraid to express their love or affection for you in front of your co-parent?</p>
+                <div>
+                    <input type="radio" name="question4" value="1" required><p>Yes</p>
+                    <input type="radio" name="question4" value="0"><p>No</p>
+                </div>
+            </li>
+            <li>
+                <p>Has your child been told by your co-parent to keep secrets from you or to lie to you?</p>
+                <div>
+                    <input type="radio" name="question5" value="1" required><p>Yes</p>
+                    <input type="radio" name="question5" value="0"><p>No</p>
+                </div>
+            </li>
+            <li>
+                <p>
+                    Does your child seem to be used as a messenger between you
+                    and your co-parent to convey messages or information?
+                </p>
+                <div>
+                    <input type="radio" name="question6" value="1" required><p>Yes</p>
+                    <input type="radio" name="question6" value="0"><p>No</p>
+                </div>
+            </li>
+            <li>
+                <p>Does your child seem to be caught in the middle of conflicts between you and your co-parent?</p>
+                <div>
+                    <input type="radio" name="question7" value="1" required><p>Yes</p>
+                    <input type="radio" name="question7" value="0"><p>No</p>
+                </div>
+            </li>
+            <li>
+                <p>Does your child feel like they have to protect your co-parent from you?</p>
+                <div>
+                    <input type="radio" name="question8" value="1" required><p>Yes</p>
+                    <input type="radio" name="question8" value="0"><p>No</p>
+                </div>
+            </li>
+            <li>
+                <p>Have you been threatened or coerced into cutting off contact with your child by your co-parent?</p>
+                <div>
+                    <input type="radio" name="question9" value="1" required><p>Yes</p>
+                    <input type="radio" name="question9" value="0"><p>No</p>
+                </div>
+            </li>
+            <li>
+                <p>Does your co-parent seem to be trying to turn your child against you?</p>
+                <div>
+                    <input type="radio" name="question10" value="1" required><p>Yes</p>
+                    <input type="radio" name="question10" value="0"><p>No</p>
+                </div>
+            </li>
+        </ol>
+        <button type="submit" value="Submit" id='test-submit-btn'>Submit</button>
+    </form>
+
+    {% include 'pages/test-blocks/score.html' %}
+</div>
+<script src="{% static 'js/test.js' %}"></script>
+{% endblock %}

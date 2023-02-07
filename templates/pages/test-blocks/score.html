@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div id="score">
+    {% if score %}
+    <h1 class="title">Results</h1>
+    <div>
+        <p>Based on your answers, your score is: {{ score }}</p>
+        {% if score >= 2 %}
+        <p>{{ results }}</p>
+        {% elif 2 < score <= 4 %}
+        <p>{{ results }}</p>
+        {% else %}
+        <p>{{ results }}</p>
+        {% endif %}
+        <p>
+            It's important to note that while a positive answer to some of these questions
+            may suggest parental alienation, a professional evaluation from a mental health
+            expert is needed for a definitive diagnosis.
+        </p>
+    </div>
+    <a href="/">Back to main page</a>
+    {% endif %}
+</div>
+{% endblock %}

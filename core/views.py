@@ -78,6 +78,29 @@ def stories_add(request):
     return render(request, template, context=data)
 
 
+def process_alienation_test(request):
+    get_template = 'pages/test-blocks/test.html'
+    post_template = 'pages/test-blocks/score.html'
+    if request.method != 'POST':
+        return render(request, get_template)
+    else:
+        answers = list()
+        for question in range(1, 11):
+            answer = int(request.POST.get(f'question{question}'))
+            answers.append(answer)
+
+        score = sum(answers)
+        results = 'High likelihood of parental alienation'
+
+        if score <= 2:
+            results = 'Low likelihood of parental alienation'
+        elif score <= 4:
+            results = 'Moderate likelihood of parental alienation'
+
+        # Render the results page with the calculated score and results
+        return render(request, post_template, {'score': score, 'results': results})
+
+
 def pageNotFound(request, exception):
     template = "pages/error.html"
     data = {"title": "Ops, something is wrong"}
