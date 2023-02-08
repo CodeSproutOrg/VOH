@@ -1,3 +1,7 @@
+@media screen and (max-width: 1024px) {
+    #test-main-description p {font-size: 11px;}
+}
+
 @media screen and (max-width: 950px) {
     p {font-size: 18px;}
     .title {font-size: 45px;}
@@ -11,6 +15,8 @@
         text-align: center;
     }
     #who-we-are-content {width: 100%;}
+
+    #test-main-description p {font-size: 10px;}
 
     /* Resources */
     #documents a {font-size: 15px;}
@@ -29,8 +35,9 @@
     /*.fight {flex-direction: row;}*/
     /*.fight-img {display: none;}*/
 
-    /* Resources */
-    #documents a {font-size: 13px;}
+    #test-main {height: 13%;}
+    #test-main-description h1 {font-size: 18px;}
+    #test-main-description a {font-size: 14px;}
 
     #numbers {
         background-position: right center;
@@ -60,6 +67,8 @@
 
     /* Resources */
     #documents a {font-size: 11px;}
+    /* Resources ? */
+    #documents a {font-size: 13px;}
 }
 
 @media screen and (max-width: 760px) {
@@ -68,6 +77,16 @@
     .number-content { flex-direction: column; }
     .number-content-text { text-align: center; font-size: 13px;}
     .number-content-title {font-size: 35px;}
+
+    #test-main {justify-content: center; height: 10%;}
+    #test-main img {display: none;}
+    #test-main-description {
+        align-items: center;
+        text-align: center;
+        background-color: #2e1e0b;
+        padding: 3%;
+        width: 50%;
+    }
 
     #navigation-title {font-size: 60px;}
     .navigation-btn {font-size: large;}
@@ -88,6 +107,10 @@
 
     /* Resources */
     #resources-content div .title {font-size: 70px;}
+}
+
+@media screen and (max-width: 650px) {
+    #test-main {height: 9%;}
 }
 
 @media screen and (max-width: 610px) {
@@ -119,6 +142,35 @@
     /* Resources */
     #resources-content div .title {font-size: 60px;}
     #documents a {font-size: 9px;}
+
+    #test-main {
+        height: 7%;
+    }
+    #test-main img {
+        display: block;
+        width: 55%;
+    }
+    #test-main-description {width: 35%;}
+    #test-main-description h1 {
+        font-size: 14px;
+    }
+    #test-main-description p {
+        font-size: 7px;
+    }
+    #test-main-description a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    #test-main {flex-direction: column; height: unset; background-image: unset;}
+    #test-main img {
+        width: 100%;
+        padding: 0;
+    }
+    #test-main-description {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 430px) {
@@ -147,5 +199,5 @@
     .number-content-text {font-size: 12px;}
 
     #contact-us h1 {font-size: 45px;}
-
 }
+

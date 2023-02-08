@@ -57,3 +57,14 @@ class TestStoriesView(TestCase):
         response = self.client.post(reverse('stories'), data=data)
         self.assertEqual(UserPost.objects.count(), 1)
         self.assertEqual(response.status_code, 302)
+
+class TestTestView(TestCase):
+    """ Testing process_alienation_test view """
+    def test_get(self):
+        response = self.client.get(reverse('process_alienation_test'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'pages/test-blocks/test.html')
+
+    # TODO: write test with post request
+    def test_post(self):
+        pass

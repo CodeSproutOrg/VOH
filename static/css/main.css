@@ -167,6 +167,32 @@
     border: 1px solid;
 }
 
+/* PA Test */
+#test-main {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/main-page/test.png);
+    background-repeat: no-repeat;
+    /* backdrop-filter: blur(8px); */
+    background-size: 100%;
+}
+#test-main img {width: 60%; padding: 3%;}
+#test-main-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    width: 30%;
+}
+#test-main-description h1 {margin-bottom: 5%;}
+#test-main-description p {font-size: 15px;}
+#test-main-description a {
+    border: 1px solid;
+    padding: 1% 4%;
+    color: white;
+}
+
 /* Numbers */
 #numbers {
     height: 40rem;
@@ -226,7 +252,6 @@
     background-color: white;
     color: #35250E;
 }
-
 
 
 /* Buttons */
