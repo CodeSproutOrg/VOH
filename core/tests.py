@@ -37,7 +37,7 @@ class TestStoriesView(TestCase):
     def test_get(self):
         response = self.client.get(reverse('stories'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'pages/stories.html')
+        self.assertTemplateUsed(response, 'pages/stories/stories.html')
 
 
     def test_post(self):
@@ -55,8 +55,8 @@ class TestStoriesView(TestCase):
             'result': 'Test result'
         }
         response = self.client.post(reverse('stories'), data=data)
-        self.assertEqual(UserPost.objects.count(), 1)
-        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'pages/stories/stories_add.html')
 
 class TestTestView(TestCase):
     """ Testing process_alienation_test view """

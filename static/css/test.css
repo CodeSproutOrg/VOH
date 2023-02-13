@@ -22,7 +22,7 @@
     background-color: transparent;
 }
 
-#score {padding: 5%; margin: 5% 0;}
+#score {padding: 5%; margin-bottom: 5%;}
 #score div {padding: 0 4%;}
 #score p {font-size: 25px;}
 #score a {padding: 4%; margin-bottom: 5%; font-size: 20px;}

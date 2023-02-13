@@ -1,12 +1,12 @@
-import os
 import logging
+import os
 
 from django.http import FileResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 
 from .forms import UserPostForm
-from .models import Post, Link
 from .mail_notification import new_story_notification, signing_up_for_an_online_group_notification
+from .models import Post, Link
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,7 +26,6 @@ def index(request):
         return render(request, "pages/main.html", context=data)
     return render(request, template, context=data)
 
-
 def resources(request):
     template = "pages/resources.html"
 
@@ -41,42 +40,31 @@ def resources(request):
     }
     return render(request, template, context=data)
 
-
-def download_file(request, file_name):
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    document_path = f'{base_dir}/documents/{file_name}'
-    open_document = open(document_path, 'rb')
-    response = FileResponse(open_document, as_attachment=True, filename=file_name)
-    return response
-
-
 def blog(request):
     template = 'pages/blog.html'
     data = {"title": "Posts", "posts": Post.objects.all()}
     return render(request, template, context=data)
 
-
 def stories(request):
-    template = "pages/stories.html"
+    template_folder = 'pages/stories'
+    template = f'{template_folder}/stories.html'
+    redirect_template = f'{template_folder}/stories_add.html'
+
     form = UserPostForm()
 
-    data = {"title": "Posts", 'form': form}
-    if request.method == "POST":
+    if request.method != "POST":
+        data = {"title": "Posts", 'form': form}
+        return render(request, template, context=data)
+    else:
+        data = {"title": "Stories was add", }
         new_post = UserPostForm(request.POST)
         if new_post.is_valid():
             name = new_post.cleaned_data['name']
             logger.info(f'Add new story from {name}')
             new_post.save()
             new_story_notification(name)
-            return redirect('/stories_add')
-    return render(request, template, context=data)
 
-
-def stories_add(request):
-    template = "pages/stories_add.html"
-    data = {"title": "Stories was add", }
-    return render(request, template, context=data)
-
+            return render(request, redirect_template, context=data)
 
 def process_alienation_test(request):
     get_template = 'pages/test-blocks/test.html'
@@ -90,16 +78,23 @@ def process_alienation_test(request):
             answers.append(answer)
 
         score = sum(answers)
-        results = 'High likelihood of parental alienation'
 
         if score <= 2:
             results = 'Low likelihood of parental alienation'
         elif score <= 4:
             results = 'Moderate likelihood of parental alienation'
+        else:
+            results = 'High likelihood of parental alienation'
 
         # Render the results page with the calculated score and results
         return render(request, post_template, {'score': score, 'results': results})
 
+def download_file(request, file_name):
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    document_path = f'{base_dir}/documents/{file_name}'
+    open_document = open(document_path, 'rb')
+    response = FileResponse(open_document, as_attachment=True, filename=file_name)
+    return response
 
 def pageNotFound(request, exception):
     template = "pages/error.html"
