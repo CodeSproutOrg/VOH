@@ -2,23 +2,28 @@
 
 {% block content %}
 <div id="user-form">
-    <div>
+    <div id="user-form-description">
         <h1 class="title color">Voices of Hope</h1>
-        <p class="user-form-text">
-            Share your stories, and we'll publish them on our Facebook
-            page and include them in our documentary.
+        <p class="">
+            We invite you to share your personal experiences related to CPS/DCFS cases in the Utah
+            family court system. Your stories can help shed light on the issues and challenges faced
+            by families and individuals in these cases. We will publish your stories on our Facebook
+            page and include them in our upcoming documentary. Please keep in mind that we have a
+            zero-tolerance policy for profanity, threats, or any other negative content. We want to
+            ensure a respectful and informative discussion for all those involved.
         </p>
-        <p class="user-form-text">Please don't use profanity or threats, or anything negative.</p>
+        <p class="">Thank you for your willingness to share your story with us.</p>
     </div>
-    <form method="post" class="b-color">
+    <form method="post" class="b-color" id="user-form-questionnaire">
+        <h2 class="second-color">Questionnaire</h2>
         {% csrf_token %}
         {% for fild in form %}
         <div class="field">
-            <label id="{{ fild.id_for_label }}">{{ fild.label_tag }}</label>
+            {{ fild.label_tag }}
             {{ fild }}
         </div>
         {% endfor %}
-        <button type="submit" id="submit-btn">Send</button>
+        <button type="submit" id="submit-btn">Confirm</button>
     </form>
 </div>
 {% endblock %}

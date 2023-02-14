@@ -137,6 +137,8 @@
         border-bottom: 1px solid;
     }
     #resources-content {width: unset;}
+
+
 }
 
 @media screen and (max-width: 570px) {
@@ -167,6 +169,7 @@
 }
 
 @media screen and (max-width: 475px) {
+    /* Main */
     #test-main {flex-direction: column; height: unset; background-image: unset;}
     #test-main img {
         width: 100%;
@@ -175,6 +178,12 @@
     #test-main-description {
         width: 100%;
     }
+
+    /* Stories */
+    .field {flex-direction: column;}
+    .field label {width: 100%;}
+    .field input {width: 100%;}
+    .field textarea {width: 100%;}
 }
 
 @media screen and (max-width: 430px) {

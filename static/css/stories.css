@@ -1,23 +1,24 @@
 #user-form {padding: 5%;}
 
-.user-form-text {
-    font-size: 25px;
+#user-form-description p {
+    font-size: 20px;
     padding: 1% 4%;
 }
 
-form {
+#user-form-questionnaire {
     margin: 0 3%;
     padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.field {
-    padding: 2%;
-    font-size: 25px;
-    width: 100%;
-}
-label {color: white; width: 100%; margin-bottom: 2%;}
+#user-form-questionnaire h2 {padding: 2%;}
+
+.field {padding: 2%; font-size: 20px; width: 100%; display: flex; justify-content: space-between;}
+label {color: white; width: 30%;}
 input {
     border: none;
-    width: 100%;
+    width: 50%;
     background-color: #0000;
     color: white;
 }
@@ -27,7 +28,7 @@ input::placeholder {
 }
 textarea {
     border: none;
-    width: 100%;
+    width: 50%;
     background-color: #0000;
     color: white;
 }
@@ -43,7 +44,7 @@ select {width: 50%;}
     border: 1px solid;
     border-color: white;
     background-color: #0000;
-    width: 100%;
+    width: 96%;
 }
 #submit-btn:hover {
     border-color: white;

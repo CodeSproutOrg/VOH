@@ -54,19 +54,19 @@ class UserPost(models.Model):
     CONFIRMED_PARENTAL_ALIENATION = [('Mild', 'Mild'), ('Moderate', 'Moderate'), ('Severe', 'Severe')]
     YES_NO = [('Yes', 'Yes'), ('No', 'No')]
 
-    name = models.CharField(max_length=20, blank=True, verbose_name='name')
-    case = models.TextField(verbose_name='case')
+    name = models.CharField(max_length=20, blank=True, verbose_name='Your Name')
+    case = models.TextField(verbose_name='Your Case')
     abuse_from_CPS_DCFS = models.CharField(max_length=36, default='Substantiated abuse from CPS/DCFS',
                                            choices=ABUSE_FROM_CPS_DCFS, verbose_name='abuse from CPS/DCFS')
-    parental_alienation = models.CharField(max_length=10, default='Yes', verbose_name='Mild',
+    parental_alienation = models.CharField(max_length=10, default='Yes', verbose_name='Parental Alienation Degree',
                                            choices=CONFIRMED_PARENTAL_ALIENATION)
     allegations = models.CharField(max_length=5, choices=YES_NO, default='No',
-                                   verbose_name='allegations of parental alienation')
+                                   verbose_name='Parental Alienation Allegations')
     falsified = models.CharField(max_length=5, choices=YES_NO, default='No',
                                  verbose_name='falsified of parental alienation')
     duration = models.TextField(verbose_name='duration')
     money = models.TextField(verbose_name='money')
-    left_broken = models.TextField(verbose_name='left broken')
+    left_broken = models.TextField(verbose_name='Left / Broken')
     abuse_criteria = models.TextField(verbose_name='abuse criteria')
     result = models.TextField(verbose_name='result')
 
