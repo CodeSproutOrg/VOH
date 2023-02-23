@@ -184,9 +184,10 @@
     align-items: flex-start;
     color: white;
     width: 30%;
+    padding: 5% 0;
 }
 #test-main-description h1 {margin-bottom: 5%;}
-#test-main-description p {font-size: 15px;}
+#test-main-description p {font-size: 13px;}
 #test-main-description a {
     border: 1px solid;
     padding: 1% 4%;
@@ -205,13 +206,12 @@
 }
 #numbers-title {
     width: 30%;
-    height: 80%;
     margin-left: 5%;
     font-size: 60px;
 }
 #numbers-content {
     width: 50%;
-    height: 80%;
+    height: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

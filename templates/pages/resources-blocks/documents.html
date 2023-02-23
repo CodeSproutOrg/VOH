@@ -1,4 +1,4 @@
-<div id="documents" class="sections">
+<div id="documents-section" class="sections">
     <h1 class="title color">Documents</h1>
     <p>
         Check out documents on parental alienation. We
@@ -6,9 +6,12 @@
         videos that would not only open your eyes, but also
         help you start solving your problem.
     </p>
-    <div>
+    <div id="documents">
         {% for document in documents %}
-            <a href="/resources/{{ document }}">{{ document }}</a>
+            <div class="document b-color">
+                <p class="second-color">{{ document }}</p>
+                <a href="/resources/{{ document }}">Download</a>
+            </div>
         {% endfor %}
     </div>
 </div>

@@ -11,7 +11,7 @@ app_btn = app_btn.addEventListener('click', open_link.bind(null,4));
 function open_link(number) {
     let links = document.getElementById('links');
     let videos = document.getElementById('videos');
-    let documents = document.getElementById('documents');
+    let documents = document.getElementById('documents-section');
     let apps = document.getElementById('apps');
 
     switch (number) {

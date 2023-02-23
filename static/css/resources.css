@@ -55,8 +55,14 @@
 iframe { width: 100%; height: 350px;}
 
 /* Documents */
-#documents div {
+#documents {
     display: flex;
-    padding: 1% 3%;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+.document {
+    width: 30%;
+    padding: 5%;
+    margin: 1%;
+}
+.document p {height: 80%;}

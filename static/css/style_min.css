@@ -1,3 +1,8 @@
+@media screen and (min-width: 1400px) {
+    #numbers {background-size: 100%;}
+    #test-main-description p {font-size: 18px;}
+}
+
 @media screen and (max-width: 1024px) {
     #test-main-description p {font-size: 11px;}
 }
@@ -35,7 +40,7 @@
     /*.fight {flex-direction: row;}*/
     /*.fight-img {display: none;}*/
 
-    #test-main {height: 13%;}
+    #test-main {height: 11%;}
     #test-main-description h1 {font-size: 18px;}
     #test-main-description a {font-size: 14px;}
 
@@ -85,6 +90,7 @@
         text-align: center;
         background-color: #2e1e0b;
         padding: 3%;
+        margin: 3%;
         width: 50%;
     }
 
@@ -177,6 +183,8 @@
     }
     #test-main-description {
         width: 100%;
+        padding: 10%;
+        margin: 0;
     }
 
     /* Stories */

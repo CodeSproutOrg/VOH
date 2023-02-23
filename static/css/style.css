@@ -2,7 +2,6 @@ body {font-family: "Cinzel", sans-serif;}
 
 main {
     margin-top: 50px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -52,7 +51,10 @@ header {
 .header-links {color: #F4F1EC}
 
 /* Footer */
-#footer {background-color: black; padding: 3%;}
+#footer {
+    background-color: black;
+    padding: 3%;
+}
 
 #footer-content {display: flex; justify-content: space-between; align-items: center; margin-bottom: 2%;}
 
