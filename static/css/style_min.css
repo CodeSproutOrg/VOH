@@ -1,6 +1,10 @@
 @media screen and (min-width: 1400px) {
     #numbers {background-size: 100%;}
+    #numbers h1 {font-size: 70px;}
+
     #test-main-description p {font-size: 18px;}
+
+    #test-main img {width: 60%;}
 }
 
 @media screen and (max-width: 1024px) {
@@ -10,7 +14,7 @@
 @media screen and (max-width: 950px) {
     p {font-size: 18px;}
     .title {font-size: 45px;}
-    #numbers-title {font-size: 50px;}
+    #numbers h1 {font-size: 62px;}
     #contact-us-title {font-size: 85px;}
 
     #who-we-are {
@@ -47,26 +51,28 @@
     #numbers {
         background-position: right center;
         flex-direction: column;
+        justify-content: center;
     }
-    #numbers-title {
+    #numbers h1 {
+        font-size: 58px;
+        margin-bottom: 30px;
         width: unset;
         height: unset;
-        margin-left: 0%;
         text-align: center;
     }
     #numbers-content {
-        display: block;
-        height: 85%;
+        height: 60%;
         width: 100%;
-        margin-top: 5%;
+        justify-content: space-evenly;
     }
     .number-content {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+        margin-bottom: 2%;
     }
-    .number-content-title {width: 50%; text-align: center;}
-    .number-content-text {width: 50%;}
+    .number-content h3 {width: 30%; text-align: end;}
+    .number-content p {width: 50%; margin: 0;}
 
     #contact-us-title {font-size: 75px;}
 
@@ -79,9 +85,10 @@
 @media screen and (max-width: 760px) {
     #mane-page-title {font-size: 65px;}
     #online-group-img {display: none;}
-    .number-content { flex-direction: column; }
-    .number-content-text { text-align: center; font-size: 13px;}
-    .number-content-title {font-size: 35px;}
+
+    #numbers h1 {font-size: 50px; margin-bottom: 20px;}
+    .number-content h3 {font-size: 35px;}
+    .number-content p {font-size: 13px;}
 
     #test-main {justify-content: center; height: 10%;}
     #test-main img {display: none;}
@@ -98,19 +105,6 @@
     .navigation-btn {font-size: large;}
     .link-title {font-size: large;}
 
-    #help-us-pay {
-        flex-direction: column;
-        align-items: center;
-    }
-    .help-us-text {
-        width: 100%;
-        text-align: center;
-    }
-    #help-us-developer {
-        flex-direction: column;
-        align-items: center;
-    }
-
     /* Resources */
     #resources-content div .title {font-size: 70px;}
 }
@@ -123,7 +117,8 @@
     /* Main page */
     p {font-size: 14px;}
     #mane-page-title { font-size: 60px;}
-    .number-content-title {font-size: 25px;}
+    #numbers h1 {font-size: 43px;}
+    .number-content h3 {font-size: 25px;}
     #contact-us h1 {font-size: 65px;}
 
     #user-form-title {font-size: 60px;}
@@ -155,24 +150,19 @@
     #resources-content div .title {font-size: 60px;}
     #documents a {font-size: 9px;}
 
-    #test-main {
-        height: 7%;
-    }
+    #test-main {height: 7%;}
     #test-main img {
         display: block;
         width: 55%;
     }
     #test-main-description {width: 35%;}
-    #test-main-description h1 {
-        font-size: 14px;
-    }
-    #test-main-description p {
-        font-size: 7px;
-    }
-    #test-main-description a {
-        font-size: 10px;
-    }
-}
+    #test-main-description h1 {font-size: 14px;}
+    #test-main-description p {font-size: 7px;}
+    #test-main-description a {font-size: 10px;}
+
+    /* footer */
+    #footer {flex-direction: column;}
+    #footer-contacts {margin-bottom: 3%;}
 
 @media screen and (max-width: 475px) {
     /* Main */
@@ -200,8 +190,8 @@
 
     #modal-title {font-size: 45px;}
 
-    #numbers-title {font-size: 42px;}
-    .number-content-title {font-size: 25px;}
+    #numbers h1 {font-size: 40px;}
+    .number-content h3 {font-size: 25px;}
 
     #contact-us h1 {font-size: 50px;}
 
@@ -217,7 +207,7 @@
     .title {font-size: 40px;}
     #navigation-links {flex-direction: column;}
 
-    .number-content-text {font-size: 12px;}
+    .number-content p {font-size: 12px;}
 
     #contact-us h1 {font-size: 45px;}
 }

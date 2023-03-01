@@ -1,6 +1,4 @@
-.main-title {
-    font-size: 50px;
-}
+.main-title {font-size: 50px;}
 .content {padding: 2% 0;}
 .main-div {height: 100vh;}
 .img {width: 100%;}
@@ -9,44 +7,26 @@
 /* Main page */
 #main-page {
     height: 35rem;
-    background-image: url(../img/main-page/home.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url(../img/main-page/home.png) no-repeat center/cover;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    color: white;
 }
-#mane-page-title {
+#main-page h1 {
     font-size: 80px;
     text-align: center;
 }
-#mane-page-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#main-page-text {
-    width: 50%;
-    text-align: center;
-    font-size: 20px;
-}
-#main-page-btn {
+#main-page button {
     padding: 1% 10%;
     font-size: 15px;
-    border-color: white;
-    color: white;
+    border-color: #F4F1EC;
+    background-color: #0000002e;
 }
+#main-page button:hover {background-color: #0000009e;}
 
 /* Who we are */
-#who-we-are {
-    background-image: url(../img/main-page/who-we-are-1.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: #F4F1EC;
- }
+#who-we-are {background: #F4F1EC url(../img/main-page/who-we-are-1.png) no-repeat right;}
 #who-we-are-content {
     width: 50%;
     padding: 5%;
@@ -57,10 +37,8 @@
 }
 #who-we-are-text button {
     padding: 2% 5%;
-
     border: 1px solid;
     border-color: white;
-
     font-size: 20px;
 }
 
@@ -74,10 +52,11 @@
     justify-content: center;
     color: white;
 }
-#main-fight-title {
-    margin: 4% 2%;
+#main-fight h1 {
+    margin: 4% 0;
     width: 95%;
 }
+
 #fights {
     display: flex;
     flex-direction: row;
@@ -150,7 +129,17 @@
     background-color: #0000;
     color: white;
 }
-#modal-form {padding: 2% 5% 5% 5%;}
+
+#modal-form {
+    width: 80%;
+    padding: 2% 5% 5% 5%;
+}
+#modal-form input {
+    width: 100%;
+    margin-bottom: 5%;
+}
+#modal-form button {width: 100%;}
+
 #modal-title {
     text-align: center;
     color: white;
@@ -169,20 +158,17 @@
 
 /* PA Test */
 #test-main {
-    height: 15%;
     display: flex;
     align-items: center;
-    background-image: url(../img/main-page/test.png);
-    background-repeat: no-repeat;
-    /* backdrop-filter: blur(8px); */
+    background: url(../img/main-page/test.png) no-repeat;
     background-size: 100%;
+    /* backdrop-filter: blur(8px); */
 }
-#test-main img {width: 60%; padding: 3%;}
+#test-main img {width: 55%; padding: 3%;}
 #test-main-description {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    color: white;
     width: 30%;
     padding: 5% 0;
 }
@@ -191,23 +177,21 @@
 #test-main-description a {
     border: 1px solid;
     padding: 1% 4%;
-    color: white;
 }
+
+.test-field label {width: 30%;}
 
 /* Numbers */
 #numbers {
     height: 40rem;
     padding: 5%;
-    background-image: url(../img/main-page/number.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
+    background: url(../img/main-page/number.png) no-repeat left bottom/cover;
     display: flex;
     justify-content: space-between;
 }
-#numbers-title {
-    width: 30%;
-    margin-left: 5%;
-    font-size: 60px;
+#numbers h1 {
+    width: 40%;
+    font-size: 63px;
 }
 #numbers-content {
     width: 50%;
@@ -220,7 +204,7 @@
     display: flex;
     flex-direction: column;
 }
-.number-content-title {
+.number-content h3 {
     /*font-family: "Archivo+Black";*/
     font-weight: bolder;
     font-size: 40px;
@@ -239,15 +223,14 @@
     margin-bottom: 5%;
     text-align: center;
 }
-#contact-us-btn {
+#contact-us a {
     background-color: transparent;
     border: 1px solid;
     border-color: white;
     padding: 2% 15%;
     font-size: 20px;
-    color: white;
 }
-#contact-us-btn:hover {
+#contact-us a:hover {
     border: 1px solid;
     background-color: white;
     color: #35250E;

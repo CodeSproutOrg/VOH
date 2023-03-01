@@ -25,7 +25,11 @@
     </p>
     <form method="post" id='modal-form' class="b-color">
         {% csrf_token %}
-        <input id="modal-email" name="email" placeholder="Email">
-        <button type="submit" id="submit-btn">Send</button>
+        {% for form in forms %}
+            {{ form }}
+        {% endfor %}
+        <button type="submit" id="submit-btn" class="second-color">Send</button>
     </form>
 </div>
+
+<script src="{% static 'js/online-group.js' %}"></script>

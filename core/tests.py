@@ -1,8 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
 
-from core.models import UserPost
-
 
 class TestIndexView(TestCase):
     """ Testing main view """
