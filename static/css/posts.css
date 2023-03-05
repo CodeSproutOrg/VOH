@@ -1,4 +1,4 @@
-#posts_view {padding: 5%;}
+#posts_view {padding: 5%; min-height: 90vh;}
 #posts {
     display: flex;
     flex-wrap: wrap;

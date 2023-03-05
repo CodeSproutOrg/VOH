@@ -107,6 +107,9 @@
 
     /* Resources */
     #resources-content div .title {font-size: 70px;}
+
+    #posts {flex-direction: column;}
+    .post {width: 95%;}
 }
 
 @media screen and (max-width: 650px) {
@@ -138,8 +141,6 @@
         border-bottom: 1px solid;
     }
     #resources-content {width: unset;}
-
-
 }
 
 @media screen and (max-width: 570px) {

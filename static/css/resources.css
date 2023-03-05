@@ -70,4 +70,4 @@ iframe { width: 100%; height: 350px;}
 .document p {height: 80%;}
 
 /* Apps */
-#apps {height: 100vh;}
+#apps {min-height: 90vh;}
