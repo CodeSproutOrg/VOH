@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="post_view">
+    <h1 class="title color">{{ post.title }}</h1>
+    <p class="post-time">{{ post.time }}</p>
+    <p>{{ post.post }}</p>
+</div>
+{% endblock %}

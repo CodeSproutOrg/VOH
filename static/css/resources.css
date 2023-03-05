@@ -43,12 +43,14 @@
 
 /* Links */
 #links p {margin-bottom: 3%;}
-.link {margin-bottom: 2%;}
-.link h1 {
-    font-size: x-large;
-    padding: 2%;
- }
-.link-content {padding: 1% 2%;}
+.link {
+    min-height: 350px;
+    margin: 0 2% 2% 0;
+    width: 45%;
+    background-color: #2e1e0bed;
+}
+.link h4 {padding: 5%; height: 120px; display: flex; align-items: center;}
+.link-content {padding: 5%;}
 
 /* Videos */
 #videos p {margin-bottom: 5%; font-size: 20px;}

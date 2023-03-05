@@ -19,10 +19,18 @@ def index(request):
     else:
         return render(request, template, context=data)
 
-def blog(request):
-    template = f"{template_path}/blog.html"
-    data = {"title": "Posts", "posts": Post.objects.all()}
-    return render(request, template, context=data)
+def blog(request, post_id=None):
+    template = f"{template_path}/blog"
+
+    if not post_id:
+        template = f'{template}/blog.html'
+        data = {"title": "Posts", "posts": Post.objects.all()}
+        return render(request, template, context=data)
+    else:
+        template = f'{template}/post.html'
+        post = Post.objects.get(id=post_id)
+        data = {"title": post.title, "post": post}
+        return render(request, template, context=data)
 
 def stories(request):
     template_folder = f"{template_path}/stories"
@@ -55,7 +63,6 @@ def process_alienation_test(request):
     else:
         return render(request, templates['get_template'], context=data)
 
-
 def resources(request):
     template = f"{template_path}/resources.html"
 
@@ -66,7 +73,11 @@ def resources(request):
     data = {
         "title": "Resources of Hope",
         'links': Link.objects.all(),
-        'documents': documents_list,
+        'links_sections': [
+            'Collaborative Divorce Resources', 'Collaborative Co-Parenting Mediation Resources',
+            'Assessments and Screeners', 'Consultation and Therapy Services', 'Co-Parenting Mediation Program'
+        ],
+        'documents': documents_list
     }
     return render(request, template, context=data)
 

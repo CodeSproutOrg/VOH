@@ -8,6 +8,7 @@ handler404 = pageNotFound
 urlpatterns = [
     path('', views.index, name='main'),
     path('blog', views.blog, name='blog'),
+    path('blog/<int:post_id>/', views.blog, name='blog'),
     path('stories', views.stories, name='stories'),
     path('resources', views.resources, name='resources'),
     path('resources/<str:file_name>/', views.download_file, name='download_file'),

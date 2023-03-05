@@ -1,60 +1,24 @@
 <div id="links" class="sections active">
-    <h1 class="title color">Links</h1>
-    <p>
-        The following links are dedicated to the topic of parental alienation
-        and aim to provide a comprehensive understanding of this complex issue.
-        So, dive in and start changing your life today!
-    </p>
     <div>
+        <h1 class="title color">Links</h1>
+        <p>
+            The following links are dedicated to the topic of parental alienation
+            and aim to provide a comprehensive understanding of this complex issue.
+            So, dive in and start changing your life today!
+        </p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap;">
+        {% for link_section in links_sections %}
         <div class="link">
-            <h1 class="second-color b-color">Collaborative Divorce Resources</h1>
-            {% for link in links %}
-            {% if link.title == 'Collaborative Divorce Resources' %}
+            <h4 class="second-color b-color">{{ link_section }}</h4>
             <div class="link-content">
+                {% for link in links %}
+                {% if link.title == link_section %}
                 <a href="{{ link.url }}">{{ link.url_title}}</a>
+                {% endif %}
+                {% endfor %}
             </div>
-            {% endif %}
-            {% endfor %}
         </div>
-        <div class="link">
-            <h1 class="link-title second-color b-color">Collaborative Co-Parenting Mediation Resources</h1>
-            {% for link in links %}
-            {% if link.title == 'Collaborative Co-Parenting Mediation Resources' %}
-            <div class="link-content">
-                <a href="{{ link.url }}">{{link.url_title}}</a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="link">
-            <h1 class="link-title second-color b-color">Assessments and Screeners</h1>
-            {% for link in links %}
-            {% if link.title == 'Assessments and Screeners' %}
-            <div class="link-content">
-                <a href="{{ link.url }}">{{ link.url_title}}</a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="link">
-            <h1 class="link-title second-color b-color">Consultation and Therapy Services</h1>
-            {% for link in links %}
-            {% if link.title == 'Consultation and Therapy Services' %}
-            <div class="link-content">
-                <a href="{{ link.url }}">{{ link.url_title}}</a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <div class="link">
-            <h1 class="link-title second-color b-color">Co-parenting Mediation Program</h1>
-            {% for link in links %}
-            {% if link.title == 'Co-Parenting Mediation Program' %}
-            <div class="link-content">
-                <a href="{{ link.url }}">{{ link.url_title}}</a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
+        {% endfor %}
     </div>
 </div>

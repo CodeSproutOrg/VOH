@@ -1,8 +1,19 @@
-#posts {padding: 5%;}
+#posts_view {padding: 5%;}
+#posts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+}
 
 .post {
     padding: 2%;
-    margin: 2% 3%;
-    color: white;
+    margin: 2%;
+    width: 30%;
 }
 .post-time {font-style: italic;}
+
+
+
+#post_view {padding: 10%;}
+#post_view h1 {padding: 0;}
+#post_view p {padding: 1%;}
