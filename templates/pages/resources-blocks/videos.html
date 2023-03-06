@@ -1,6 +1,10 @@
-<div id="videos" class="sections">
+{% extends "base.html" %}
+
+
+{% block content %}
+<div id="videos-section" class="resources">
     <h1 class="title">Videos</h1>
-    <p>
+    <p class="page-description">
         Check out our playlists on parental alienation. We
         tried to collect fascinating and informative
         videos that would not only open your eyes, but also
@@ -8,6 +12,7 @@
     </p>
     <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             src="https://www.youtube.com/embed/videoseries?list=PLJhPJcXPjBd1W1wMOFsKTMC4uZU02gGsi"
-            title="YouTube video player" frameborder="0" allowfullscreen>
+            class="resources-content" title="YouTube video player" frameborder="0" allowfullscreen>
     </iframe>
 </div>
+{% endblock %}

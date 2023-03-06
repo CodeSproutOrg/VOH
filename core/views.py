@@ -63,20 +63,36 @@ def process_alienation_test(request):
     else:
         return render(request, templates['get_template'], context=data)
 
-def resources(request):
-    template = f"{template_path}/resources.html"
-
-    # Files
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    documents_list = os.listdir(f'{base_dir}/documents/')
-
+def links_view(request):
+    template = f"{template_path}/resources-blocks/links.html"
     data = {
         "title": "Resources of Hope",
         'links': Link.objects.all(),
         'links_sections': [
             'Collaborative Divorce Resources', 'Collaborative Co-Parenting Mediation Resources',
             'Assessments and Screeners', 'Consultation and Therapy Services', 'Co-Parenting Mediation Program'
-        ],
+        ]
+    }
+    return render(request, template, context=data)
+
+def videos_view(request):
+    template = f"{template_path}/resources-blocks/videos.html"
+    data = {"title": "Resources of Hope"}
+    return render(request, template, context=data)
+
+def apps_view(request):
+    template = f"{template_path}/resources-blocks/apps.html"
+    data = {"title": "Resources of Hope"}
+    return render(request, template, context=data)
+
+def documents_view(request):
+    template = f"{template_path}/resources-blocks/documents.html"
+    # Files
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    documents_list = os.listdir(f'{base_dir}/documents/')
+
+    data = {
+        "title": "Resources of Hope",
         'documents': documents_list
     }
     return render(request, template, context=data)

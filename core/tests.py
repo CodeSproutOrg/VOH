@@ -13,11 +13,7 @@ class TestIndexView(TestCase):
 
 class TestLibraryView(TestCase):
     """ Testing resources view """
-
-    def test_get(self):
-        response = self.client.get(reverse('resources'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'pages/resources.html')
+    pass
 
 
 class TestPostsView(TestCase):

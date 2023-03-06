@@ -1,13 +1,15 @@
-<div id="links" class="sections active">
-    <div>
-        <h1 class="title color">Links</h1>
-        <p>
-            The following links are dedicated to the topic of parental alienation
-            and aim to provide a comprehensive understanding of this complex issue.
-            So, dive in and start changing your life today!
-        </p>
-    </div>
-    <div style="display: flex; flex-wrap: wrap;">
+{% extends "base.html" %}
+
+
+{% block content %}
+<div id="links-section" class="resources">
+    <h1 class="title color">Links</h1>
+    <p class="page-description">
+        The following links are dedicated to the topic of parental alienation
+        and aim to provide a comprehensive understanding of this complex issue.
+        So, dive in and start changing your life today!
+    </p>
+    <div id='links' class="resources-content">
         {% for link_section in links_sections %}
         <div class="link">
             <h4 class="second-color b-color">{{ link_section }}</h4>
@@ -22,3 +24,4 @@
         {% endfor %}
     </div>
 </div>
+{% endblock %}

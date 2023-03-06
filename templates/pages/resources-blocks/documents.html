@@ -1,12 +1,16 @@
-<div id="documents-section" class="sections">
+{% extends "base.html" %}
+
+
+{% block content %}
+<div id="documents-section" class="resources">
     <h1 class="title color">Documents</h1>
-    <p>
+    <p class="page-description">
         Check out documents on parental alienation. We
         tried to collect fascinating and informative
         videos that would not only open your eyes, but also
         help you start solving your problem.
     </p>
-    <div id="documents">
+    <div id="documents" class="resources-content">
         {% for document in documents %}
             <div class="document b-color">
                 <p class="second-color">{{ document }}</p>
@@ -15,3 +19,4 @@
         {% endfor %}
     </div>
 </div>
+{% endblock %}
