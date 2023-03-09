@@ -36,7 +36,11 @@ iframe {width: 100%; height: 400px;}
 .document p {height: 80%;}
 
 /* Apps */
-
+.app {display: flex; align-items: center; flex-direction: row;}
+.app img {width: 25%; padding: 2%; border-radius: 100%;}
+.app div {width: 50%; padding: 2%;}
+.app a {}
+.app p {color: white; font-size: 10px;}
 
 /* Screen */
 @media screen and (max-width: 950px){#documents a {font-size: 15px;}}
@@ -47,6 +51,9 @@ iframe {width: 100%; height: 400px;}
     .link {width: 95%; margin: 2% 0;}
 
     .document {width: 45%;}
+
+    .app {flex-direction: column;}
+    .app div {width: 50%; text-align: center; padding: 4% 2%;}
 }
 
 @media screen and (max-width: 570px) {

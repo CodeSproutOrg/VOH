@@ -38,7 +38,7 @@ a:hover {color: #ababab;}
 /* Header */
 header {
     width: 100%;
-    height: 60px;
+    height: 80px;
     position: fixed;
     z-index: 1;
     top:0;
@@ -84,7 +84,7 @@ header {
 
 /* Main*/
 main {
-    margin-top: 50px;
+    margin-top: 75px;
     display: flex;
     flex-direction: column;
 }
