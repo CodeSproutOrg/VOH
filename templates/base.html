@@ -7,10 +7,10 @@
     {% include 'base_part/css.html' %}
 </head>
 <body>
-    <header>{% include 'base_part/header.html' %}</header>
+    <header class="b-second-color">{% include 'base_part/header.html' %}</header>
     <main>
         <div id="content">{% block content %}{% endblock %}</div>
-        <div id="footer">{% include 'base_part/footer.html' %}</div>
+        <div id="footer" class="b-second-color">{% include 'base_part/footer.html' %}</div>
     </main>
 </body>
 </html>
