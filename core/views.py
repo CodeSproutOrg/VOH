@@ -108,3 +108,8 @@ def pageNotFound(request, exception):
     template = "pages/error.html"
     data = {"title": "Ops, something is wrong"}
     return render(request, template, context=data)
+
+def developers_view(request):
+    template = f"{template_path}/service/developers.html"
+    data = {"title": "For developers"}
+    return render(request, template, context=data)

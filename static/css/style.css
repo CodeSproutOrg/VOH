@@ -105,10 +105,37 @@ main {
     align-items: center;
 }
 #footer-contacts {display: flex; flex-direction: column; }
-#footer-social-networks {width: 120px; display: flex; align-items: center;}
-#footer-social-networks img {width: 50px;}
-#git {background: white; border-radius: 50%; margin-left: 5%; padding: 1%;}
+#footer-social-networks {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: flex-end;
+}
+#footer-social-networks a {margin: 0 20px}
+#facebook {width: 50px;}
 
+/* Developers */
+#developers {
+    padding: 5%;
+    margin: auto;
+    height: 85vh;
+}
+#developers div {width: 50%;}
+
+@media screen and (max-width: 750px) {
+    /* footer */
+    #footer {flex-direction: column;}
+    #footer-contacts {
+        margin-bottom: 3%;
+        align-items: center;
+    }
+    #footer-social-networks {
+        flex-direction: column;
+    }
+    #footer-social-networks a {
+        margin-bottom: 20px;
+    }
+}
 
 @media screen and (max-width: 570px) {
     #nav {

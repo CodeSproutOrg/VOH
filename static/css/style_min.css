@@ -123,10 +123,6 @@
     #test-main-description h1 {font-size: 14px;}
     #test-main-description p {font-size: 7px;}
     #test-main-description a {font-size: 10px;}
-
-    /* footer */
-    #footer {flex-direction: column;}
-    #footer-contacts {margin-bottom: 3%;}
 }
 
 @media screen and (max-width: 475px) {
@@ -143,7 +139,6 @@
     }
 
     /* Stories */
-    #user-form-questionnaire h1 {text-align: center; padding: 8%;}
     #user-form-questionnaire button {width: 96%;}
     .field {flex-direction: column;}
     .field label {width: 100%; padding: 2% 0%;}

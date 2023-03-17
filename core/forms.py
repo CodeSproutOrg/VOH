@@ -13,11 +13,12 @@ class UserPostForm(ModelForm):
         fields = '__all__'
 
         widgets = {
-            'name': TextInput(attrs={'placeholder': 'Enter your name (optional)'}),
+            'name': TextInput(attrs={'placeholder': 'Enter your name (optional)', 'class': 'q-form'}),
             'case': Textarea(attrs={
                 'rows': "6",
                 'placeholder': 'Courthouse, the judge, any professionals that were significant '
-                               'in the case or anyone professional/agency that you are referring'
+                               'in the case or anyone professional/agency that you are referring',
+                'class': 'q-form'
             }),
             'abuse_from_CPS_DCFS': Select(attrs={'placeholder': 'Were there any abuse or safety issues'}),
             'parental_alienation': Select(attrs={'placeholder': 'Confirmed parental alienation'}),
@@ -25,23 +26,28 @@ class UserPostForm(ModelForm):
             'falsified': Select(attrs={'placeholder': 'Falsified allegations'}),
             'duration': Textarea(attrs={
                 'rows': "6",
-                'placeholder': 'How long has the case been in the Utah family court system'
+                'placeholder': 'How long has the case been in the Utah family court system',
+                'class': 'q-form'
             }),
             'money': Textarea(attrs={
                 'rows': "6",
-                'placeholder': 'How much money has been paid in fees?'
+                'placeholder': 'How much money has been paid in fees?',
+                'class': 'q-form'
             }),
             'left_broken': Textarea(attrs={
                 'rows': "6",
-                'placeholder': 'Ethics / Abuse criteria / Safety issues were left or were broken'
+                'placeholder': 'Ethics / Abuse criteria / Safety issues were left or were broken',
+                'class': 'q-form'
             }),
             'abuse_criteria': Textarea(attrs={
                 'rows': "6",
-                'placeholder': 'Abuse criteria that was not acknowledged addressed or treated'
+                'placeholder': 'Abuse criteria that was not acknowledged addressed or treated',
+                'class': 'q-form'
             }),
             'result': Textarea(attrs={
                 'rows': "6",
-                'placeholder': 'What was the result?'
+                'placeholder': 'What was the result?',
+                'class': 'q-form'
             }),
         }
 

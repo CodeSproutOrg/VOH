@@ -13,7 +13,7 @@
 .post-time {font-style: italic;}
 
 
-
 #post_view {padding: 10%; min-height: 90vh;}
 #post_view h1 {padding: 0;}
-#post_view p {padding: 1%;}
+#post_view div {padding: 1%;}
+#post_view pre {font-family: "Cinzel", sans-serif;}

@@ -1,46 +1,50 @@
 /* Stories */
 #user-form-view {padding: 5%;}
 
-#user-form-questionnaire {margin: 0 4%;}
+#user-form-questionnaire {
+    margin: 0 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #user-form-questionnaire form {
-    margin: 0 3%;
+    width: 100%;
     padding: 3%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
-#user-form-questionnaire h1 {padding: 4%; margin: 0 4%;}
+#user-form-questionnaire h1 {
+    width: 50%;
+    padding: 1%;
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 40px;
+    border-bottom: solid 0.5px #F4F1EC;;
+    text-align: center;
+}
 
 .field {padding: 2%; font-size: 20px; width: 100%; display: flex; justify-content: space-between;}
-.field label {color: white; width: 30%; padding: 2%;}
-.field input {
+.field label {padding: 2%; color: white; width: 30%; }
+
+.q-form {
     padding: 2%;
     border: 1px solid;
     width: 60%;
     background-color: #0000;
     color: white;
 }
-.field textarea {
-    padding: 2%;
-    border: 1px solid;
-    width: 60%;
-    background-color: #0000;
+.q-form::placeholder {
     color: white;
+    opacity: 1;
 }
 .field select {width: 60%; padding: 2%;}
 
-.field input::placeholder {
-    color: white;
-    opacity: 1;
-}
-.field textarea::placeholder {
-    color:white;
-    opacity: 1;
-}
 
 #user-form-questionnaire button {
+    width: 90%;
     padding: 2% 5%;
-    margin: 5% 2%;
+    margin: 5% 0;
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
@@ -52,4 +56,15 @@
     font-size: 30px;
     padding: 3%;
     color: #ababab;
+}
+
+
+@media screen and (max-width: 960px) {
+    #user-form-questionnaire h1 {width: 60%;}
+}
+@media screen and (max-width: 740px) {
+    #user-form-questionnaire h1 {width: 65%; font-size: 35px; margin-bottom: 20px;}
+}
+@media screen and (max-width: 570px) {
+    #user-form-questionnaire h1 {width: 80%; font-size: 30px;}
 }

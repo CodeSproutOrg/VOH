@@ -18,5 +18,7 @@ urlpatterns = [
     path('documents', views.documents_view, name='documents_view'),
     path('documents/<str:file_name>/', views.download_file, name='download_file'),
 
+    path('developers', views.developers_view, name='developers'),
+
     path('admin/', admin.site.urls),
 ]
