@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+{% load blog_tags %}
+
 
 {% block content %}
+{% blog_post post_id as post%}
 <div id="post_view">
     <h1 class="title color">{{ post.title }}</h1>
     <div>
         <p class="post-time">{{ post.time }}</p>
-        <pre>{{ post.post }}</pre>
+        <p>{{ post.post|linebreaks }}</p>
         <a href="/blog"><- Back to blog</a>
     </div>
 </div>

@@ -24,12 +24,11 @@ def blog(request, post_id=None):
 
     if not post_id:
         template = f'{template}/blog.html'
-        data = {"title": "Posts", "posts": Post.objects.all()}
+        data = {"title": "Posts"}
         return render(request, template, context=data)
     else:
         template = f'{template}/post.html'
-        post = Post.objects.get(id=post_id)
-        data = {"title": post.title, "post": post}
+        data = {"title": f"Post {post_id}", 'post_id': post_id}
         return render(request, template, context=data)
 
 def stories(request):
