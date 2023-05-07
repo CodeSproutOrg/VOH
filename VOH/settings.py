@@ -4,9 +4,12 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('KEY', 'development-key')
-DEBUG = bool(os.environ.get('DEBUG', True))
+DEBUG = bool(os.environ.get('DEBUG', ''))
 
-ALLOWED_HOSTS = ['*']
+if SECRET_KEY != 'development-key':
+    ALLOWED_HOSTS = ['https://voicesofhope-nqhlj.ondigitalocean.app/', '104.16.244.78']
+else:
+    ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',

@@ -5,10 +5,17 @@
     padding: 2%;
 }
 
+
 .post {
+    height: 300px;
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     padding: 2%;
     margin: 2%;
-    width: 30%;
 }
 .post-time {font-style: italic;}
 
@@ -16,3 +23,9 @@
 #post_view h1 {padding: 0;}
 #post_view div {padding: 2% 1%;}
 #post_view pre {font-family: "Cinzel", sans-serif;}
+
+
+@media screen and (max-width: 760px) {
+    #posts {flex-direction: column;}
+    .post {width: 95%; padding: 5%;}
+}

@@ -1,19 +1,24 @@
 import datetime
 from django.db import models
+from django.urls import reverse
 
 
 class Post(models.Model):
     """ Model of post """
 
-    title = models.CharField(max_length=20)
-    post = models.TextField(null=False)
-    time = models.DateTimeField(default=datetime.datetime.now())
+    title = models.CharField(max_length=50, verbose_name='Title of post')
+    slug = models.SlugField(max_length=50, unique=True, verbose_name='URL')
+    post = models.TextField(null=False, verbose_name='Text of post')
+    time = models.DateTimeField(default=datetime.datetime.now(), verbose_name='Time')
 
     class Meta:
         verbose_name = 'Post'
 
+    def get_absolute_url(self):
+        return reverse('blog', kwargs={'post_slug': self.slug })
+
     def __str__(self):
-        return f'Post {self.title}'
+        return f'{self.title}'
 
 
 class Link(models.Model):

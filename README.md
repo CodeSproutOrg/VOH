@@ -29,6 +29,5 @@ accessed at http://localhost:8000/.
 
 The application also includes an admin panel that can be accessed
 by navigating to http://localhost:8000/admin/ and logging in with 
-the provided credentials. The admin panel allows for easy management of the posts, links and files.
-
-
+the provided credentials. The admin panel allows for easy management 
+of the posts, links and files.

@@ -17,7 +17,7 @@ a:hover {color: #ababab;}
 /* #38250E */
 
 /* Error */
-#error {padding: 5%;}
+#error {padding: 5%; height: 90vh;}
 #error-message {
     font-family: "Quicksand";
     font-size: 80px;

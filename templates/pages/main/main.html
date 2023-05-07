@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  {% include 'pages/main/blocks/main-page.html' %}
+  {% include 'pages/main/blocks/who-we-are.html' %}
+  {% include 'pages/main/blocks/fight.html' %}
+  {% include 'pages/main/blocks/test.html' %}
+  {% include 'pages/main/blocks/numbers.html' %}
+  {% include 'pages/main/blocks/contact-us.html' %}
+
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock %}

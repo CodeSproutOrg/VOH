@@ -2,37 +2,33 @@ from django.test import TestCase
 from django.urls import reverse
 
 
-class TestIndexView(TestCase):
+class BaseViewTestCase(TestCase):
+    """ Base test-case for views """
+    name = None
+    template = None
+
+    def test_get(self):
+        response = self.client.get(reverse(self.name))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, self.template)
+
+class TestIndexView(BaseViewTestCase):
     """ Testing main view """
-
-    def test_get(self):
-        response = self.client.get(reverse('main'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'pages/main.html')
+    name = 'main'
+    template = 'pages/main/main.html'
 
 
-class TestLibraryView(TestCase):
-    """ Testing resources view """
-    pass
-
-
-class TestPostsView(TestCase):
+class TestPostsView(BaseViewTestCase):
     """ Testing posts view """
-
-    def test_get(self):
-        response = self.client.get(reverse('blog'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'pages/blog.html')
+    name = 'blog'
+    template = 'pages/blog/blog.html'
 
 
-class TestStoriesView(TestCase):
+class TestStoriesView(BaseViewTestCase):
     """ Testing stories view """
-
-    def test_get(self):
-        response = self.client.get(reverse('stories'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'pages/stories/stories.html')
-
+    name = 'stories'
+    template = 'pages/stories/stories.html'
+    template_add = 'pages/stories/stories_add.html'
 
     def test_post(self):
         data = {
@@ -48,16 +44,14 @@ class TestStoriesView(TestCase):
             'abuse_criteria': 'Test abuse criteria',
             'result': 'Test result'
         }
-        response = self.client.post(reverse('stories'), data=data)
+        response = self.client.post(reverse(self.name), data=data)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'pages/stories/stories_add.html')
+        self.assertTemplateUsed(response, self.template_add)
 
-class TestTestView(TestCase):
+class TestTestView(BaseViewTestCase):
     """ Testing process_alienation_test view """
-    def test_get(self):
-        response = self.client.get(reverse('process_alienation_test'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'pages/test-blocks/test.html')
+    name = 'process_alienation_test'
+    template = 'pages/test-blocks/test.html'
 
     # TODO: write test with post request
     def test_post(self):

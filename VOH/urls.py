@@ -8,7 +8,7 @@ handler404 = pageNotFound
 urlpatterns = [
     path('', views.index, name='main'),
     path('blog', views.blog, name='blog'),
-    path('blog/<int:post_id>/', views.blog, name='blog'),
+    path('blog/<slug:post_slug>/', views.blog, name='blog'),
     path('stories', views.stories, name='stories'),
     path('test', views.process_alienation_test, name='process_alienation_test'),
 

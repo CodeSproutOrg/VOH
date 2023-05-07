@@ -1,19 +1,20 @@
 <div id='mobile-nav'>
-  <h3 class='second-color'>Voices of Hope</h3>
+  <h3 class='second-color'>VOICES OF HOPE</h3>
   <button id="toggle-btn" class='second-color'>&#9776;</button>
 </div>
 <div id="nav">
-  <a href="/" class='second-color'>HOME</a>
-  <a href="/stories" class='second-color'>VOICES OF HOPE</a>
-  <a href="/blog" class='second-color'>BLOG</a>
-  <div class="dropdown">
-    <a class="dropbtn second-color">RESOURCES</a>
-    <div class="dropdown-content">
-      <a href="/links" class="color">Links</a>
-      <a href="/videos" class="color">Videos</a>
-      <a href="/documents" class="color">Documents</a>
-      <a href="/apps" class="color">Apps</a>
+  {% for key, value in menu.items %}
+    {% if key != 'RESOURCES' %}
+      <a href="{{ value }}" class='second-color'>{{ key }}</a>
+    {% else %}
+      <div class="dropdown">
+      <a class="dropbtn second-color">{{ key }}</a>
+      <div class="dropdown-content">
+        {% for subkey, subvalue in value.items %}
+        <a href="{{ subvalue }}" class="color">{{ subkey }}</a>
+        {% endfor %}
+      </div>
     </div>
-  </div>
+    {% endif %}
+  {% endfor %}
 </div>
-

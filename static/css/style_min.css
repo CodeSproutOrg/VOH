@@ -92,9 +92,6 @@
         margin: 3%;
         width: 50%;
     }
-
-    #posts {flex-direction: column;}
-    .post {width: 95%;}
 }
 
 @media screen and (max-width: 650px) {

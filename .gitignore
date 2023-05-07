@@ -1,6 +1,8 @@
+# Local
 /venv
 /.idea
 
+# Files
 /server.log
 /config.py
-/documents/Parental Alientation Resources/
+/static/documents/Parental Alientation Resources/
