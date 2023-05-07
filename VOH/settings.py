@@ -7,9 +7,9 @@ SECRET_KEY = os.environ.get('KEY', 'development-key')
 DEBUG = bool(os.environ.get('DEBUG', ''))
 
 if SECRET_KEY != 'development-key':
-    ALLOWED_HOSTS = ['https://voicesofhope-nqhlj.ondigitalocean.app/', '104.16.244.78']
+    ALLOWED_HOSTS = ['voicesofhope-nqhlj.ondigitalocean.app', '104.16.244.78']
 else:
-    ALLOWED_HOSTS = ['voicesofhope-nqhlj.ondigitalocean.app']
+    ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
