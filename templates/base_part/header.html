@@ -1,13 +1,17 @@
+{% load static %}
+
 <div id='mobile-nav'>
-  <h3 class='second-color'>VOICES OF HOPE</h3>
+  <a href="/"><img src="{% static 'img/logo.svg' %}" alt="logo"></a>
   <button id="toggle-btn" class='second-color'>&#9776;</button>
 </div>
 <div id="nav">
-  {% for key, value in menu.items %}
+  <a href="/" id="nav-logo"><img src="{% static 'img/logo.svg' %}" alt="logo"></a>
+  <div id="nav-bar">
+    {% for key, value in menu.items %}
     {% if key != 'RESOURCES' %}
-      <a href="{{ value }}" class='second-color'>{{ key }}</a>
+    <a href="{{ value }}" class='navbar-button second-color'>{{ key }}</a>
     {% else %}
-      <div class="dropdown">
+    <div class="dropdown navbar-button">
       <a class="dropbtn second-color">{{ key }}</a>
       <div class="dropdown-content">
         {% for subkey, subvalue in value.items %}
@@ -16,5 +20,8 @@
       </div>
     </div>
     {% endif %}
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
+
+

@@ -5,7 +5,6 @@ from .func import stories_func, calculate_score, make_a_list_of_documents_func, 
 from .models import Link
 
 menu = {
-    'HOME': '/',
     'VOICES OF HOPE': '/stories',
     'BLOG': '/blog',
     'RESOURCES': {
