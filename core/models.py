@@ -48,6 +48,19 @@ class Link(models.Model):
     def __str__(self):
         return f'Link {self.url_title}'
 
+class VideoLink(models.Model):
+    title = models.CharField(max_length=50, verbose_name='Title of video')
+    url = models.CharField(max_length=80, verbose_name='Link of video')
+    slug = models.SlugField(max_length=50, unique=True, verbose_name='URL')
+
+    class Meta:
+        verbose_name = 'Video link'
+
+    def get_absolute_url(self):
+        return reverse('videos', kwargs={'video_slug': self.slug })
+
+    def __str__(self):
+        return self.title
 
 class UserPost(models.Model):
     """ Model of users post """

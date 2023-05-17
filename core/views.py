@@ -21,6 +21,7 @@ main_path = f'{template_path}/main'
 blog_path = f'{template_path}/blog'
 stories_path = f'{template_path}/stories'
 resources_path = f'{template_path}/resources-blocks'
+videos_path = f'{resources_path}/videos'
 pa_test_path = f'{template_path}/test-blocks'
 service_path = f'{template_path}/service'
 error_path = f'{template_path}/error'
@@ -92,10 +93,18 @@ def links_view(request):
     }
     return render(request, template, context=data)
 
-def videos_view(request):
-    template = f"{resources_path}/videos.html"
-    data = {"title": "Resources of Hope", "menu": menu}
-    return render(request, template, context=data)
+def videos_view(request, video_slug=None):
+    data = {'menu': menu}
+
+    if not video_slug:
+        template = f"{videos_path}/videos.html"
+        data['title'] = "Resources of Hope"
+        return render(request, template, context=data)
+    else:
+       template = f"{videos_path}/video.html"
+       data["title"] = f"Post {video_slug}"
+       data['video_slug'] = video_slug
+       return render(request, template, context=data)
 
 def apps_view(request):
     template = f"{resources_path}/apps.html"

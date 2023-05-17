@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-
+{% load static %}
+{% load blog_tags %}
 
 {% block content %}
 <div id="videos-section" class="resources">
@@ -10,6 +11,15 @@
         videos that would not only open your eyes, but also
         help you start solving your problem.
     </p>
+    {% video_posts as videos %}
+    <div>
+        {% for video in videos %}
+        <div>
+            <h3>{{ video.title }}</h3>
+            <a href="{{ video.get_absolute_url }}">Watch video...</a>
+        </div>
+        {% endfor %}
+    </div>
     <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             src="https://www.youtube.com/embed/videoseries?list=PLJhPJcXPjBd1W1wMOFsKTMC4uZU02gGsi"
             class="resources-content" title="YouTube video player" frameborder="0" allowfullscreen>

@@ -12,8 +12,9 @@ urlpatterns = [
     path('stories', views.stories, name='stories'),
     path('test', views.process_alienation_test, name='process_alienation_test'),
 
-    path('links', views.links_view, name='links'),
     path('videos', views.videos_view, name='videos'),
+    path('videos/<slug:video_slug>/', views.videos_view, name='videos'),
+    path('links', views.links_view, name='links'),
     path('apps', views.apps_view, name='apps'),
     path('documents', views.documents_view, name='documents_view'),
     path('documents/<str:file_name>/', views.download_file, name='download_file'),
