@@ -12,17 +12,13 @@
         help you start solving your problem.
     </p>
     {% video_posts as videos %}
-    <div>
+    <div id="videos">
         {% for video in videos %}
-        <div>
-            <h3>{{ video.title }}</h3>
+        <div class="video b-color">
+            <h6 class="second-color">{{ video.title }}</h6>
             <a href="{{ video.get_absolute_url }}">Watch video...</a>
         </div>
         {% endfor %}
     </div>
-    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            src="https://www.youtube.com/embed/videoseries?list=PLJhPJcXPjBd1W1wMOFsKTMC4uZU02gGsi"
-            class="resources-content" title="YouTube video player" frameborder="0" allowfullscreen>
-    </iframe>
 </div>
 {% endblock %}
