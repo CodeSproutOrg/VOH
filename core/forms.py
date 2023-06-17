@@ -12,42 +12,60 @@ class UserPostForm(ModelForm):
         model = UserPost
         fields = '__all__'
 
+        rows = '6'
+        css_class = 'q-form'
+
         widgets = {
-            'name': TextInput(attrs={'placeholder': 'Enter your name (optional)', 'class': 'q-form'}),
-            'case': Textarea(attrs={
-                'rows': "6",
-                'placeholder': 'Courthouse, the judge, any professionals that were significant '
-                               'in the case or anyone professional/agency that you are referring',
-                'class': 'q-form'
+            'name': TextInput(attrs={
+                'placeholder': 'Enter your name (optional)',
+                'class': css_class
             }),
-            'abuse_from_CPS_DCFS': Select(attrs={'placeholder': 'Were there any abuse or safety issues'}),
-            'parental_alienation': Select(attrs={'placeholder': 'Confirmed parental alienation'}),
-            'allegations': Select(attrs={'placeholder': 'Allegations of parental alienation'}),
-            'falsified': Select(attrs={'placeholder': 'Falsified allegations'}),
+            'case': Textarea(attrs={
+                'rows': rows,
+                'class': css_class,
+                'placeholder': 'Courthouse, the judge, any professionals that were significant '
+                               'in the case or anyone professional/agency that you are referring'
+            }),
+            'abuse_from_CPS_DCFS': Select(attrs={
+                'class': css_class,
+                'placeholder': 'Were there any abuse or safety issues'}
+            ),
+            'parental_alienation': Select(attrs={
+                'class': css_class,
+                'placeholder': 'Confirmed parental alienation'}
+            ),
+            'allegations': Select(attrs={
+                'class': css_class,
+                'placeholder': 'Allegations of parental alienation'}
+            ),
+            'falsified': Select(attrs={
+                'class': css_class,
+                'placeholder': 'Falsified allegations'}
+            ),
             'duration': Textarea(attrs={
-                'rows': "6",
-                'placeholder': 'How long has the case been in the Utah family court system',
-                'class': 'q-form'
+                'rows': rows,
+                'class': css_class,
+                'placeholder': 'How long has the case been in the Utah family court system'
             }),
             'money': Textarea(attrs={
-                'rows': "6",
-                'placeholder': 'How much money has been paid in fees?',
-                'class': 'q-form'
+                'rows': rows,
+                'class': css_class,
+                'placeholder': 'How much money has been paid in fees?'
             }),
             'left_broken': Textarea(attrs={
-                'rows': "6",
-                'placeholder': 'Ethics / Abuse criteria / Safety issues were left or were broken',
-                'class': 'q-form'
+                'rows': rows,
+                'class': css_class,
+                'placeholder': 'Ethics / Abuse criteria / Safety issues were left or were broken'
             }),
             'abuse_criteria': Textarea(attrs={
-                'rows': "6",
-                'placeholder': 'Abuse criteria that was not acknowledged addressed or treated',
-                'class': 'q-form'
+                'rows': rows,
+                'class': css_class,
+                'placeholder': 'Abuse criteria that was not acknowledged addressed or treated'
             }),
             'result': Textarea(attrs={
-                'rows': "6",
-                'placeholder': 'What was the result?',
-                'class': 'q-form'
+                'rows': rows,
+                'class': css_class,
+                'placeholder': 'What was the result?'
             }),
         }
 

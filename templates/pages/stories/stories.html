@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <div id="user-form-view">
     <div id="user-form-description">
-        <h1 class="title color">Voices of Hope</h1>
+        <h1 class="title color">Voices of Hope Questionnaire</h1>
         <p class="page-description">
             We invite you to share your personal experiences related to CPS/DCFS cases in the Utah
             family court system. Your stories can help shed light on the issues and challenges faced
@@ -13,19 +14,23 @@
             ensure a respectful and informative discussion for all those involved.
         </p>
         <p class="page-description">Thank you for your willingness to share your story with us.</p>
+        <button id="start-button" class="stories-button">Start Questionnaire</button>
     </div>
-    <div class="b-color" id="user-form-questionnaire">
-        <h1 class="second-color">Questionnaire</h1>
+    <div id="user-form-questionnaire">
+        <h1 class="title color">Questionnaire</h1>
         <form method="post" >
             {% csrf_token %}
             {% for fild in form %}
-            <div class="field">
+            <div id="fild_{{ forloop.counter }}" class="field">
                 {{ fild.label_tag }}
                 {{ fild }}
             </div>
             {% endfor %}
-            <button type="submit">Confirm</button>
+            <button class="stories-button" type="submit">Confirm</button>
         </form>
     </div>
 </div>
+
+<script src="{% static 'js/questionnaire.js' %}"></script>
 {% endblock %}
+
